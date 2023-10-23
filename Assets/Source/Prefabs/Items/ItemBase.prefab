@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4889456753175532711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4889456753175532709}
+  - component: {fileID: 4889456753175532710}
+  m_Layer: 0
+  m_Name: ItemBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4889456753175532709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889456753175532711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4889456753175532710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4889456753175532711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edbf30d306551d4dbcc8859cfeff910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Item base
+  Description: 'item description
+
+    +stat
+
+    -stat'
+  Attack:
+    Value: 0.1
+    Type: 1
+    Order: 0
+  Health:
+    Value: 0
+    Type: 0
+    Order: 0
+  Speed:
+    Value: 0
+    Type: 0
+    Order: 0
+  CollectibleChance:
+    Value: 0
+    Type: 0
+    Order: 0
+  Omnivamp:
+    Value: 0
+    Type: 0
+    Order: 0
+  AttackSpeed:
+    Value: 0
+    Type: 0
+    Order: 0
+  AbilityHaste:
+    Value: 0
+    Type: 0
+    Order: 0
+  Picture: {fileID: -1089007290, guid: 666398929a2837342b7c538bea9e90be, type: 3}

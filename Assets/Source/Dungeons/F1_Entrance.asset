@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9693a65a443914090f594850cffdd8, type: 3}
+  m_Name: F1_Entrance
+  m_EditorClassIdentifier: 
+  name: F1 // Dungeon
+  desc: Start here
+  Rooms:
+  - {fileID: 75926534176873513, guid: c52d44a6e4410fa46b551f0f88768b86, type: 3}
+  - {fileID: 75926534176873513, guid: 5aa3b43e95844b6468b95eff7a2ae9f3, type: 3}
+  - {fileID: 75926534176873513, guid: e9eab919a68b8914999781db628b8c6c, type: 3}
+  - {fileID: 75926534176873513, guid: feb1f393ed5c0ae44be2d0ae1afc4e13, type: 3}
+  - {fileID: 75926534176873513, guid: 1064d9568d74c3a479012a949ab61ff4, type: 3}
+  - {fileID: 75926534176873513, guid: 478eff7f841f22a45b10bafb6561ebfd, type: 3}
+  - {fileID: 75926534176873513, guid: 112d0f06988b3d24dbf651eadaf30f16, type: 3}
+  - {fileID: 75926534176873513, guid: 2d6b39bfbbcdc6e4b9de50ac8e469030, type: 3}
+  - {fileID: 75926534176873513, guid: b3be0f5852190804c9f021dc7afd0909, type: 3}
+  BossRooms:
+  - {fileID: 75926534176873513, guid: 28af751c7cd4c8e4fba86ef290aac6e8, type: 3}
+  RoomsToBoss: 5
+  _secretForComplete: {fileID: 11400000, guid: 453faa6b4b010394c8c3927c8b193dc9, type: 2}

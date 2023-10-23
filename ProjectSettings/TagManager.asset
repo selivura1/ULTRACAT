@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PlayerSpawn
+  - MobSpawn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Wall
+  - Teleport
+  - Projectile
+  - Entity
+  - EnemyProjectile
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Floor
+    uniqueID: 1142629389
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Entities
+    uniqueID: 1883950881
+    locked: 0
+  - name: FX
+    uniqueID: 2164176615
+    locked: 0
+  - name: Projectile
+    uniqueID: 2167599219
+    locked: 0
+  - name: UI
+    uniqueID: 1535543583
+    locked: 0

@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5873340214325456884
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 245991023400245829, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_Name
+      value: ActiveItemLifeOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 245991023400245831, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497999913340349533, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: name
+      value: Life orb
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497999913340349533, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: Picture
+      value: 
+      objectReference: {fileID: 683363155, guid: 666398929a2837342b7c538bea9e90be, type: 3}
+    - target: {fileID: 2497999913340349533, guid: c45438775fdd6854ab4192786de97931, type: 3}
+      propertyPath: Description
+      value: Heals you
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2497999913340349533, guid: c45438775fdd6854ab4192786de97931, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: c45438775fdd6854ab4192786de97931, type: 3}
+--- !u!1 &5975049952002733489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 245991023400245829, guid: c45438775fdd6854ab4192786de97931, type: 3}
+  m_PrefabInstance: {fileID: 5873340214325456884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7419470547547932048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975049952002733489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677b87ade849d8c4f960b92e4f8e31be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Cat's blessing
+  Description: Restores 25% of health
+  Attack:
+    Value: 0
+    Type: 0
+    Order: 0
+  Health:
+    Value: 0
+    Type: 0
+    Order: 0
+  Speed:
+    Value: 0
+    Type: 0
+    Order: 0
+  CollectibleChance:
+    Value: 0
+    Type: 0
+    Order: 0
+  Omnivamp:
+    Value: 0
+    Type: 0
+    Order: 0
+  AttackSpeed:
+    Value: 0
+    Type: 0
+    Order: 0
+  AbilityHaste:
+    Value: 0
+    Type: 0
+    Order: 0
+  Picture: {fileID: -626397770, guid: 666398929a2837342b7c538bea9e90be, type: 3}
+  maxCharge: 25
+  healFromMaxHealth: 0.25
+  characterHealAnimationKey: heal
