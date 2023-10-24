@@ -1,19 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
 using System;
 
 public class DungeonGenerator : MonoBehaviour
 {
-    Dungeon _dungeon { get { return _levelPack[stage]; } }
+    Dungeon _dungeon { get { return _levelPack[_stage]; } }
     [SerializeField] Dungeon[] _levelPack;
     [SerializeField] AstarPath _pathfinder;
+    [SerializeField] private float _transitionDelay = 0.8f;
+    private FadeUI _fadeUI;
     public Room CurrentRoom { get; private set; }
-    Movement playerMovement;
-    PlayerSpawner playerSpawner;
-    int roomNumber = -1;
-    int stage = 0;
+    Movement _playerMovement;
+    PlayerSpawner _playerSpawner;
+    int _roomNumber = 0;
+    int _stage = 0;
     public Action onRoomSpawned;
     public Action onRoomPreDestroy;
     public Action onStageCompleted;
@@ -21,9 +22,7 @@ public class DungeonGenerator : MonoBehaviour
 
     public void CreateDungeon()
     {
-        roomNumber = 0; 
         ProceedToNextRoom();
-        //Log.WriteInLog("Welcome to the PELMENI dungeon!");
     }
     public void DungeonComplete()
     {
@@ -32,19 +31,20 @@ public class DungeonGenerator : MonoBehaviour
             GameManager.Database.UnlockSecret(_dungeon._secretForComplete);
         }
         onStageCompleted?.Invoke();
-        stage++;
-        if (_levelPack.Length <= stage)
+        _stage++;
+        if (_levelPack.Length <= _stage)
         {
             FindAnyObjectByType<MenuControllerUI>().GameWin();
             return;
         }
-        roomNumber = 0;
+        _roomNumber = 0;
         ProceedToNextRoom();
     }
     private void Start()
     {
-        playerSpawner = FindAnyObjectByType<PlayerSpawner>();
-        playerMovement = playerSpawner.GetPlayer().GetComponent<Movement>();
+        _playerSpawner = FindAnyObjectByType<PlayerSpawner>();
+        _playerMovement = _playerSpawner.GetPlayer().GetComponent<Movement>();
+        _fadeUI = FindAnyObjectByType<FadeUI>();
     }
     private void SpawnRandomRoom(Room[] pool)
     {
@@ -63,26 +63,34 @@ public class DungeonGenerator : MonoBehaviour
             Destroy(CurrentRoom.gameObject);
         }
         CurrentRoom = Instantiate(room, transform);
-        playerMovement.Teleport(CurrentRoom.PlayerRespawn.position);
+        _playerMovement.Teleport(CurrentRoom.PlayerRespawn.position);
         _pathfinder.Scan();
         
         CurrentRoom.Initialize();
-        roomNumber++;
+        _roomNumber++;
         onRoomSpawned?.Invoke();
+        CurrentRoom.Exit.onTriggered += StartNextRoomTransition;
     }
-    public void ProceedToNextRoom()
+    private void ProceedToNextRoom()
     {
-        if (roomNumber == _dungeon.RoomsToBoss)
+        if(CurrentRoom)
+            CurrentRoom.Exit.onTriggered -= StartNextRoomTransition;
+        if (_roomNumber == _dungeon.RoomsToBoss)
         {
             SpawnRandomRoom(_dungeon.BossRooms);
             onBossFightStart?.Invoke();
             return;
         }
-        //if(roomNumber == _dungeon.RoomsToTreasure)
-        //{
-        //    SpawnRandomRoom(_dungeon.TreasureRooms);
-        //    return;
-        //}
+        else if (_roomNumber > _dungeon.RoomsToBoss)
+        {
+            DungeonComplete();
+            return;
+        }
         SpawnRandomRoom(_dungeon.Rooms);
+    }
+    private void StartNextRoomTransition()
+    {
+        _fadeUI.Fade();
+        Invoke(nameof(ProceedToNextRoom), _transitionDelay);
     }
 }

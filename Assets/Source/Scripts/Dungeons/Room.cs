@@ -8,7 +8,7 @@ public class Room : MonoBehaviour
 {
     public Transform PlayerRespawn;
     List<EntityBase> spawnedMobs = new List<EntityBase>();
-    [SerializeField] RoomExit _exit;
+    public RoomExit Exit;
     public bool IsClear { get; private set; }
     public Action onRoomClear;
     public void Initialize()
@@ -58,12 +58,12 @@ public class Room : MonoBehaviour
     public void ClearRoom()
     {
         IsClear = true;
-        _exit.Activate();
+        Exit.Activate();
         onRoomClear?.Invoke();
     }
     public void LockRoom()
     {
         IsClear = false;
-        _exit.Deactivate();
+        Exit.Deactivate();
     }
 }

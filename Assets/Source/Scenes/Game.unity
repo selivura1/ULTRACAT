@@ -795,6 +795,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6646247488901476567, guid: 377bd2385d4960d46a5a527197c315d8, type: 3}
   m_PrefabInstance: {fileID: 451393899}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &519099247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 519099249}
+  - component: {fileID: 519099248}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &519099248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519099247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 562ff3c02fd2fd145a7358becfda45ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &519099249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519099247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.437574, y: 2.9253786, z: -0.13511112}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +949,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 0
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1246,7 +1290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerRespawn: {fileID: 854632633}
-  _exit: {fileID: 0}
+  Exit: {fileID: 0}
 --- !u!1 &854632632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3171,6 +3215,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 598036eaafa7bf94992896ccb908e07b, type: 2}
   - {fileID: 11400000, guid: abcc299d85fbeb94a973d677ec565736, type: 2}
   _pathfinder: {fileID: 198728390}
+  _transitionDelay: 1
 --- !u!4 &1393608481
 Transform:
   m_ObjectHideFlags: 0
@@ -9015,3 +9060,4 @@ SceneRoots:
   - {fileID: 1467697692}
   - {fileID: 2065846427}
   - {fileID: 674479987}
+  - {fileID: 519099249}
