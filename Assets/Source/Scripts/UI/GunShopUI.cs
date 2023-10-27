@@ -54,6 +54,6 @@ public class GunShopUI : MonoBehaviour
         //_leftArrow.interactable = index > 0 ? true : false;
         //_rightArrow.interactable = index < weapons.Length - 1 ? true : false;
 
-        _equipButton.interactable = !currentDealer.AlreadyEquipped(index);
+        _equipButton.interactable = !currentDealer.IsAlreadyEquipped(index);
     }
 }
