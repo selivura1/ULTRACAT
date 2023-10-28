@@ -4,35 +4,30 @@ using UnityEngine;
 public class Options : MonoBehaviour
 {
     public OptionsConfig CurrentConfig { get; private set; } = new OptionsConfig();
-    [SerializeField] private string _optionsKey = "options";
-    public Action onOptionsUpdate;
+    public Action onOptionsUpdated;
+    private DataService _dataService = new DataService();
+    private const string OptionsRelPath = "options.json";
     private void Start()
     {
         LoadOptions();
     }
-    public void SetOptions(OptionsConfig config)
-    {
-        CurrentConfig = config;
-    }
     public void LoadOptions()
     {
-        if (!PlayerPrefs.HasKey(_optionsKey))
+        try
         {
-            Debug.Log("NO OPTIONS SAVED >>> CREATING NEW");
-            CurrentConfig.Resolution = Screen.currentResolution;
-            SaveOptions();
+            CurrentConfig = _dataService.LoadData<OptionsConfig>(OptionsRelPath);
         }
-        else
-            SetOptions(JsonUtility.FromJson<OptionsConfig>(PlayerPrefs.GetString(_optionsKey)));
+        catch
+        {
+            CurrentConfig = new OptionsConfig();
+        }
         Screen.fullScreen = CurrentConfig.Fullscreen;
-        Debug.Log("Options Loaded: | SFX: " + CurrentConfig.SFX + " | MUSIC: " + CurrentConfig.Music + " | FULLSCREEN: " + CurrentConfig.Fullscreen);
-        onOptionsUpdate?.Invoke();
+        onOptionsUpdated?.Invoke();
     }
     public void SaveOptions()
     {
-        PlayerPrefs.SetString(_optionsKey, JsonUtility.ToJson(CurrentConfig));
-        Debug.Log("Options saved: | SFX: " + CurrentConfig.SFX + " | MUSIC: " + CurrentConfig.Music + " | FULLSCREEN: " + CurrentConfig.Fullscreen);
-        onOptionsUpdate?.Invoke();
+        _dataService.SaveData(OptionsRelPath, CurrentConfig);
+        onOptionsUpdated?.Invoke();
     }
     public void SetSFX(float value)
     {

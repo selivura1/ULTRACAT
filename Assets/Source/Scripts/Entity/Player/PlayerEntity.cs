@@ -1,25 +1,24 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class PlayerEntity : EntityBase
+namespace Ultracat
 {
-    [SerializeField] private float immortalTimer = 1f;
-    private float immortalStart = 0;
-    private void Start()
+    public class PlayerEntity : EntityBase
     {
-        onDeath += (EntityBase a) => immortalStart = Time.time;   
-    }
-    private void OnDestroy()
-    {
-        onDeath -= (EntityBase a) => immortalStart = Time.time;
-    }
-    private void Update()
-    {
-        if (Time.time >= immortalStart + immortalTimer)
+        [SerializeField] private float immortalTimer = 1f;
+        private float immortalStart = 0;
+        private void Start()
         {
-            invincible = false;
+            onDeath += (EntityBase a) => immortalStart = Time.time;
+        }
+        private void OnDestroy()
+        {
+            onDeath -= (EntityBase a) => immortalStart = Time.time;
+        }
+        private void Update()
+        {
+            if (Time.time >= immortalStart + immortalTimer)
+            {
+                invincible = false;
+            }
         }
     }
 }

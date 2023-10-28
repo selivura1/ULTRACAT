@@ -1,7 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
 [System.Serializable]
 public class EntityStats
 {
@@ -24,7 +21,7 @@ public class CharacterStat
 {
     public float BaseValue;
     private bool isDirty = true;
-    private float _value; 
+    private float _value;
     private float lastBaseValue = float.MinValue;
     public float Value
     {
@@ -126,7 +123,7 @@ public class StatModifier
     }
     public new string ToString()
     {
-        if(Value > 0)
+        if (Value > 0)
         {
             switch (Type)
             {

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 [ExecuteInEditMode]
 public class Tooltip : MonoBehaviour
@@ -16,7 +14,7 @@ public class Tooltip : MonoBehaviour
     [SerializeField] bool _followCursor;
 
     private void Awake()
-    { 
+    {
         _rectTransform = GetComponent<RectTransform>();
     }
     private void Update()
@@ -26,14 +24,14 @@ public class Tooltip : MonoBehaviour
         Vector2 pos = Input.mousePosition;
 
         float pivotX = (pos.x + offsetX) / Screen.width;
-        float pivotY = (pos.y + offsetY )/ Screen.height;
+        float pivotY = (pos.y + offsetY) / Screen.height;
         _rectTransform.pivot = new Vector2(pivotX, pivotY);
 
         transform.position = pos;
     }
     public void SetText(string content, string header = "")
     {
-        if(string.IsNullOrEmpty(header))
+        if (string.IsNullOrEmpty(header))
         {
             _headerField.gameObject.SetActive(false);
         }

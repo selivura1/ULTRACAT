@@ -1,64 +1,64 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public enum StackBehaviour
+namespace Ultracat
 {
-    ResetOnDamage,
-    ReduceOnDamage,
-    DoNothing
-}
-public class KillstackingWeapon : ProjectileWeapon
-{
-    [SerializeField] protected int stacks;
-    [SerializeField] protected StackBehaviour stackBehaviour; 
-    protected void Start()
+    public enum StackBehaviour
     {
-        user.onDamage += OnUserDamaged;
-        user.onKill += OnUserKill;
+        ResetOnDamage,
+        ReduceOnDamage,
+        DoNothing
     }
-    protected void OnUserKill()
+    public class KillstackingWeapon : ProjectileWeapon
     {
-        stacks++;
-        OnStackRecieved();
-        OnStackUpdated();
-    }
-    protected virtual void OnStackUpdated()
-    {
-
-    }
-    protected virtual void OnStackRecieved()
-    {
-
-    }
-
-    protected virtual void OnStackReduced()
-    {
-
-    }
-
-    protected virtual void OnStackReset()
-    {
-
-    }
-    protected void OnUserDamaged(DamageBreakDown damage)
-    {
-        switch (stackBehaviour)
+        [SerializeField] protected int stacks;
+        [SerializeField] protected StackBehaviour stackBehaviour;
+        protected void Start()
         {
-            case StackBehaviour.ResetOnDamage:
-                stacks = 0;
-                OnStackReset();
-                break;
-            case StackBehaviour.ReduceOnDamage:
-                stacks--;
-                OnStackReduced();
-                break;
-            case StackBehaviour.DoNothing:
-                break;
-            default:
-                break;
+            user.onDamage += OnUserDamaged;
+            user.onKill += OnUserKill;
         }
-        OnStackUpdated();
-    }
-}
+        protected void OnUserKill()
+        {
+            stacks++;
+            OnStackRecieved();
+            OnStackUpdated();
+        }
+        protected virtual void OnStackUpdated()
+        {
 
+        }
+        protected virtual void OnStackRecieved()
+        {
+
+        }
+
+        protected virtual void OnStackReduced()
+        {
+
+        }
+
+        protected virtual void OnStackReset()
+        {
+
+        }
+        protected void OnUserDamaged(DamageBreakDown damage)
+        {
+            switch (stackBehaviour)
+            {
+                case StackBehaviour.ResetOnDamage:
+                    stacks = 0;
+                    OnStackReset();
+                    break;
+                case StackBehaviour.ReduceOnDamage:
+                    stacks--;
+                    OnStackReduced();
+                    break;
+                case StackBehaviour.DoNothing:
+                    break;
+                default:
+                    break;
+            }
+            OnStackUpdated();
+        }
+    }
+
+}

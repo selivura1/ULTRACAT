@@ -1,30 +1,29 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class BoomerangProjectile : Projectile
+namespace Ultracat
 {
-    [SerializeField] float _returnAcceleration = 10;
-    protected override void OnTriggerEnter2D(Collider2D other)
+    public class BoomerangProjectile : Projectile
     {
-        base.OnTriggerEnter2D(other);
-        if (!other.TryGetComponent(out EntityBase entity))
-            timer = 0;
-    }
-    public override void MovementPerFixedUpdate()
-    {
-        if (timer <= 0)
+        [SerializeField] float _returnAcceleration = 10;
+        protected override void OnTriggerEnter2D(Collider2D other)
         {
-            CurrentSpeed += Time.fixedDeltaTime * _returnAcceleration;
-            transform.right = (caster.transform.position - transform.position).normalized;
-            if (Vector3.Distance(caster.transform.position, transform.position) < .4f)
-                Terminate();
+            base.OnTriggerEnter2D(other);
+            if (!other.TryGetComponent(out EntityBase entity))
+                timer = 0;
         }
-        rigidbody.velocity = transform.right * CurrentSpeed * Time.fixedDeltaTime;
-    }
-    public override void CountdownTimer()
-    {
-        timer -= Time.fixedDeltaTime;
+        public override void MovementPerFixedUpdate()
+        {
+            if (timer <= 0)
+            {
+                CurrentSpeed += Time.fixedDeltaTime * _returnAcceleration;
+                transform.right = (caster.transform.position - transform.position).normalized;
+                if (Vector3.Distance(caster.transform.position, transform.position) < .4f)
+                    Terminate();
+            }
+            rigidbody.velocity = transform.right * CurrentSpeed * Time.fixedDeltaTime;
+        }
+        public override void CountdownTimer()
+        {
+            timer -= Time.fixedDeltaTime;
+        }
     }
 }

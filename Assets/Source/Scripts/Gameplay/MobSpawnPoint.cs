@@ -1,19 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class MobSpawnPoint : MonoBehaviour
+namespace Ultracat
 {
-    [SerializeField] private EntityBase mob;
-    public EntityBase Mob
+    public class MobSpawnPoint : MonoBehaviour
     {
-        private set
+        [SerializeField] private EntityBase mob;
+        public EntityBase Mob
         {
+            private set
+            {
 
-        }
-        get
-        {
-            return mob;
+            }
+            get
+            {
+                return mob;
+            }
         }
     }
 }

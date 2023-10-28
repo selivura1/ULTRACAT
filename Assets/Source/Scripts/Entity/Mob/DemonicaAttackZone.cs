@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class DemonicaAttackZone : Projectile
+namespace Ultracat
 {
-    
+    public class DemonicaAttackZone : Projectile
+    {
+
+    }
 }

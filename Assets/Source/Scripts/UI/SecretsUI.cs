@@ -1,31 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class SecretsUI : MonoBehaviour
+namespace Ultracat
 {
-    [SerializeField] private SecretDisplay _displayPrefab;
-    [SerializeField] private Transform _layout;
-    [SerializeField] private TMP_Text _titleText;
-    private List<SecretDisplay> _spawned = new List<SecretDisplay>();
-    private void OnEnable()
+    public class SecretsUI : MonoBehaviour
     {
-        Refresh();
-    }
-    public void Refresh()
-    {
-        _titleText.text = "SECRETS (" + GameManager.Database.SecretProgress + "/" + GameManager.Database.SecretAmount + ")";
-        for (int i = 0; i < _spawned.Count; i++)
+        [SerializeField] private SecretDisplay _displayPrefab;
+        [SerializeField] private Transform _layout;
+        [SerializeField] private TMP_Text _titleText;
+        private List<SecretDisplay> _spawned = new List<SecretDisplay>();
+        private void OnEnable()
         {
-            Destroy(_spawned[i].gameObject);
+            Refresh();
         }
-        _spawned.Clear();
-        foreach (var item in GameManager.Database.CurrentSecrets)
+        public void Refresh()
         {
-            var spawned =  Instantiate(_displayPrefab, _layout);
-            spawned.Initialize(item.displayName, item.description, item.Icon);
-            _spawned.Add(spawned);
+            _titleText.text = "SECRETS (" + GameManager.Database.SecretProgress + "/" + GameManager.Database.SecretAmount + ")";
+            for (int i = 0; i < _spawned.Count; i++)
+            {
+                Destroy(_spawned[i].gameObject);
+            }
+            _spawned.Clear();
+            foreach (int index in GameManager.Database.CurrentSecrets)
+            {
+                Secret secret = GameManager.Database.Secrets[index];
+                SecretDisplay spawned = Instantiate(_displayPrefab, _layout);
+                spawned.Initialize(secret.displayName, secret.description, secret.Icon);
+                _spawned.Add(spawned);
+            }
         }
     }
 }

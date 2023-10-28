@@ -1,10 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 //Script for room logic such as mob spawn
-public class Room : MonoBehaviour
+namespace Ultracat
+{
+    public class Room : MonoBehaviour
 {
     public Transform PlayerRespawn;
     List<EntityBase> spawnedMobs = new List<EntityBase>();
@@ -48,7 +49,7 @@ public class Room : MonoBehaviour
             ClearRoom();
             return true;
         }
-        else if(IsClear != false)
+        else if (IsClear != false)
         {
             LockRoom();
         }
@@ -66,4 +67,5 @@ public class Room : MonoBehaviour
         IsClear = false;
         Exit.Deactivate();
     }
+}
 }

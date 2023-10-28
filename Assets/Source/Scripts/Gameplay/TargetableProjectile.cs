@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-
-public class TargetableProjectile : Projectile
+namespace Ultracat
 {
-    public EntityBase Target;
-    public override void MovementPerFixedUpdate()
+    public class TargetableProjectile : Projectile
     {
-        if(Target)
-            rigidbody.velocity = (Target.transform.position - transform.position).normalized * CurrentSpeed * Time.fixedDeltaTime;
+        public EntityBase Target;
+        public override void MovementPerFixedUpdate()
+        {
+            if (Target)
+                rigidbody.velocity = (Target.transform.position - transform.position).normalized * CurrentSpeed * Time.fixedDeltaTime;
+        }
     }
 }

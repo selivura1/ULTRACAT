@@ -622,6 +622,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06e1b0f48500dc41a532354c8a83ead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stageSecrets: 000000000100000002000000
+  _scoreSecrets:
+  - Score: 5000
+    SecretID: 3
+  - Score: 10000
+    SecretID: 4
 --- !u!1 &388553550
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,50 +801,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6646247488901476567, guid: 377bd2385d4960d46a5a527197c315d8, type: 3}
   m_PrefabInstance: {fileID: 451393899}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &519099247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 519099249}
-  - component: {fileID: 519099248}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &519099248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519099247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 562ff3c02fd2fd145a7358becfda45ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &519099249
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519099247}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.437574, y: 2.9253786, z: -0.13511112}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +911,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.125
+  orthographic size: 5.6875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1096,7 +1058,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3b960ad987bee4fae7a0b828071046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _optionsKey: options
 --- !u!4 &602894367
 Transform:
   m_ObjectHideFlags: 0
@@ -6354,11 +6315,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _secrets:
-  - {fileID: 11400000, guid: 7b321bddd667cf64fa04417cfa4451aa, type: 2}
-  - {fileID: 11400000, guid: e1fc913368057604b858a59bc7a9f856, type: 2}
   - {fileID: 11400000, guid: 453faa6b4b010394c8c3927c8b193dc9, type: 2}
   - {fileID: 11400000, guid: f7216c5502fccb94bacb58a816c23912, type: 2}
   - {fileID: 11400000, guid: da137adadfb630441a804dd33d74e2dc, type: 2}
+  - {fileID: 11400000, guid: 7b321bddd667cf64fa04417cfa4451aa, type: 2}
+  - {fileID: 11400000, guid: e1fc913368057604b858a59bc7a9f856, type: 2}
   _items:
   - {fileID: 5785839044771608846, guid: 00bf810c586cbc74e81b85f1049a30ba, type: 3}
   - {fileID: 5785839044771608846, guid: 4a90fc101d914fc44a2f798a21fb634a, type: 3}
@@ -6373,7 +6334,6 @@ MonoBehaviour:
   _usableItems:
   - {fileID: 5785839044771608846, guid: 00bf810c586cbc74e81b85f1049a30ba, type: 3}
   - {fileID: 5785839044771608846, guid: 4a90fc101d914fc44a2f798a21fb634a, type: 3}
-  - {fileID: 7696610694569387596, guid: b66666d3d31847740ba534abe69cf101, type: 3}
   - {fileID: -7854689714605681609, guid: 007beba32fbc9994286785a3069179b5, type: 3}
   - {fileID: -2327189730168908572, guid: 05757b0027169984da5f1ac91714f5d3, type: 3}
   - {fileID: 5785839044771608846, guid: 1a87efc1a50658d4cb7eff0ea0676a18, type: 3}
@@ -6391,9 +6351,6 @@ MonoBehaviour:
   - {fileID: 6077948248582158548, guid: 7e8fd11d434620141bdfdcf0103ab954, type: 3}
   _usableWeapons:
   - {fileID: 6301284751497506464, guid: a5a1705d1bc8804488dd4340756fe80c, type: 3}
-  - {fileID: 8447497772007416208, guid: 29c89454b0e0c2b4a8e9a407b7c86826, type: 3}
-  - {fileID: 2817851925227172702, guid: 6290b54b056a73b4baa9b22b8fe83590, type: 3}
-  - {fileID: 5199879139131338356, guid: 5ce609348ba2f0b42b559f0eb3478374, type: 3}
   Collectibles:
   - {fileID: 4403590385786661474, guid: cffa224e20e07654295bb440de25ccde, type: 3}
   - {fileID: 3579766001363599379, guid: 6abf6392d32e35e4e91dcb5aadec04b1, type: 3}
@@ -6413,16 +6370,9 @@ MonoBehaviour:
   - {fileID: 251243992211399081, guid: 89a607f56aa6d7e46a6f321089f00153, type: 3}
   - {fileID: 451704826027939548, guid: 5dcfda30a966ac543b0f06ae821cb4f6, type: 3}
   blankSave:
-    UnlockedSecrets:
-    - {fileID: 0}
-    voidTokens: 0
-    kills: 0
-    restarts: 0
+    SecretIDs: 
   save:
-    UnlockedSecrets: []
-    voidTokens: 0
-    kills: 0
-    restarts: 0
+    SecretIDs: 
 --- !u!224 &1769525326 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7416197771579247521, guid: bf23f07e8abab8544b09bf4b04e4a7f5, type: 3}
@@ -6705,8 +6655,6 @@ MonoBehaviour:
   stageCompleteScore: 1000
   levelUpScore: 200
   roomClearScore: 50
-  _5kScoreSecret: {fileID: 11400000, guid: 7b321bddd667cf64fa04417cfa4451aa, type: 2}
-  _10kScoreSecret: {fileID: 11400000, guid: e1fc913368057604b858a59bc7a9f856, type: 2}
 --- !u!224 &1840775463 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6813300737032493713, guid: d77ebab7cdf155e4db38c3c37b0c09cc, type: 3}
@@ -9060,4 +9008,3 @@ SceneRoots:
   - {fileID: 1467697692}
   - {fileID: 2065846427}
   - {fileID: 674479987}
-  - {fileID: 519099249}

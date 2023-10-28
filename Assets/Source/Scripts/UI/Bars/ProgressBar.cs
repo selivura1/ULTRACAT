@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor;
 [ExecuteInEditMode]
 public class ProgressBar : MonoBehaviour
 {
@@ -34,7 +32,7 @@ public class ProgressBar : MonoBehaviour
         float fillAmount = currentOffset / maxOffset;
         Mask.fillAmount = fillAmount;
         fill.color = color;
-        if(useMaxColor)
+        if (useMaxColor)
         {
             if (Max <= CurrentValue)
                 fill.color = maxColor;

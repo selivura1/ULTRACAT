@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialTable : MonoBehaviour
+namespace Ultracat
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    public class TutorialTable : MonoBehaviour
     {
-        if(collision.gameObject.TryGetComponent<PlayerEntity>(out var player))
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            //FindAnyObjectByType<UIManager>().OpenTutorial();
+            if (collision.gameObject.TryGetComponent<PlayerEntity>(out var player))
+            {
+                //FindAnyObjectByType<UIManager>().OpenTutorial();
+            }
         }
     }
 }

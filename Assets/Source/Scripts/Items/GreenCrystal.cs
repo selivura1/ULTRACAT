@@ -1,36 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class GreenCrystal : Item
+namespace Ultracat
 {
-    [SerializeField] private float _healthRequired = 0.7f;
-    [SerializeField] private StatModifier _damamgeBuff;
-    bool _hasBuff = false;
-    protected override void OnStart()
+    public class GreenCrystal : Item
     {
-        CheckIfEnoughHealth();
-        entity.onHealthChanged += CheckIfEnoughHealth;
-    }
-
-    private void CheckIfEnoughHealth(float change = 0)
-    {
-        if(entity.GetHealth() > entity.EntityStats.Health.Value * _healthRequired)
+        [SerializeField] private float _healthRequired = 0.7f;
+        [SerializeField] private StatModifier _damamgeBuff;
+        bool _hasBuff = false;
+        protected override void OnStart()
         {
-            if (!_hasBuff)
+            CheckIfEnoughHealth();
+            entity.onHealthChanged += CheckIfEnoughHealth;
+        }
+
+        private void CheckIfEnoughHealth(float change = 0)
+        {
+            if (entity.GetHealth() > entity.EntityStats.Health.Value * _healthRequired)
             {
-                entity.EntityStats.Attack.AddModifier(_damamgeBuff);
-                _hasBuff = true;
+                if (!_hasBuff)
+                {
+                    entity.EntityStats.Attack.AddModifier(_damamgeBuff);
+                    _hasBuff = true;
+                }
+            }
+            else if (_hasBuff)
+            {
+                entity.EntityStats.Attack.RemoveModifier(_damamgeBuff);
+                _hasBuff = false;
             }
         }
-        else if (_hasBuff)
+        protected override void OnDespawn()
         {
-            entity.EntityStats.Attack.RemoveModifier(_damamgeBuff);
-            _hasBuff = false;
+            entity.onHealthChanged -= CheckIfEnoughHealth;
         }
-    }
-    protected override void OnDespawn()
-    {
-        entity.onHealthChanged -= CheckIfEnoughHealth;
     }
 }

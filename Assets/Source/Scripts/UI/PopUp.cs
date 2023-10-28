@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 
 public class PopUp : MonoBehaviour
 {
-    [SerializeField]TMP_Text _text;
+    [SerializeField] TMP_Text _text;
     [SerializeField] float speed = 15;
     Vector3 worldPos;
     Vector3 dir;
@@ -14,7 +12,7 @@ public class PopUp : MonoBehaviour
     {
         _text.text = text;
         _text.color = color;
-        dir = new Vector3(Random.Range(-1f, 1f), Random.Range( 1f, 2f));
+        dir = new Vector3(Random.Range(-1f, 1f), Random.Range(1f, 2f));
         worldPos = pos;
         Destroy(gameObject, 0.8f);
     }

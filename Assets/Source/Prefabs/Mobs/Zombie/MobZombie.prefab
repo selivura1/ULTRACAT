@@ -37,6 +37,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7655021386165950715}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -46,7 +47,6 @@ Transform:
   - {fileID: 1186587540304702289}
   - {fileID: 6251067110268977518}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7655021386165950713
 MonoBehaviour:
@@ -63,12 +63,11 @@ MonoBehaviour:
   Splash: {fileID: 0}
   name: Zombie
   currentHealth: 0
-  MaxHealthLimit: 200
   EntityStats:
     Attack:
       BaseValue: 20
     Health:
-      BaseValue: 40
+      BaseValue: 60
     Speed:
       BaseValue: 245
     BonusChance:
@@ -116,6 +115,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 6486f51e379d0c341a736aaa1f520575, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -128,13 +133,33 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7655021386165950715}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
   m_Radius: 0.64335036
 --- !u!114 &1229797659585169385
 MonoBehaviour:
@@ -159,6 +184,10 @@ MonoBehaviour:
   _attackRange: 1.25
   _preparing: 0
   currentTurn: 1
+  _wallMask:
+    serializedVersion: 2
+    m_Bits: 0
+  _pathUpdateInterval: 1
 --- !u!114 &1229797659585169388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +218,7 @@ MonoBehaviour:
     value: -1
 --- !u!95 &1229797659585169366
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -203,6 +232,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -267,6 +297,7 @@ MonoBehaviour:
   - {fileID: 3368741949398972565, guid: 4fb1d949b43abad4e8d4c08eea4f88bb, type: 3}
   - {fileID: 4691380668106493820, guid: eeec19b7f332b804eb2c9e9074eabf3c, type: 3}
   - {fileID: 877142339072551328, guid: 2a43429b9ea700046b7db1a2c7cedd6b, type: 3}
+  onDanageRandomEffects: []
   onHealEffects:
   - {fileID: 8837259449863384722, guid: cbd6ab7a45800824e855ce064ced09be, type: 3}
 --- !u!114 &1519945178895906931
@@ -424,13 +455,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7655021388181876796}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7655021386165950718}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7655021388181876930
 SpriteRenderer:
@@ -507,19 +538,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8144572634861330904}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7655021386165950718}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &761845161450109600
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 7655021386165950718}
     m_Modifications:
     - target: {fileID: 6652624006851640270, guid: 12c505343e9bd7940afb33c7ad5fa968, type: 3}
@@ -571,6 +603,9 @@ PrefabInstance:
       value: Shadow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c505343e9bd7940afb33c7ad5fa968, type: 3}
 --- !u!4 &6251067110268977518 stripped
 Transform:

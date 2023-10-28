@@ -1,80 +1,75 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class Mob : EntityBase
+namespace Ultracat
 {
-    [SerializeField] int SoulDrop = 1;
-    [SerializeField] EntityStatbar _statbar = new EntityStatbar();
-    [SerializeField] Secret _secret;
-    public override void Initialize()
+    public class Mob : EntityBase
     {
-        base.Initialize();
-        _statbar.Initialize(this);
-    }
-    public override void Terminate(EntityBase killer = null)
-    {
-        var player = (PlayerEntity)killer;
-        if (player)
+        [SerializeField] int SoulDrop = 1;
+        [SerializeField] EntityStatbar _statbar = new EntityStatbar();
+        public override void Initialize()
         {
-            float chance = player.EntityStats.BonusChance.Value;
-            if (Random.Range(0, 100) <= chance)
+            base.Initialize();
+            _statbar.Initialize(this);
+        }
+        public override void Terminate(EntityBase killer = null)
+        {
+            var player = (PlayerEntity)killer;
+            if (player)
             {
-                SpawnCollectibleNearby(GameManager.Database.Collectibles[0]);
+                float chance = player.EntityStats.BonusChance.Value;
+                if (Random.Range(0, 100) <= chance)
+                {
+                    SpawnCollectibleNearby(GameManager.Database.Collectibles[0]);
+                }
+            }
+            DropExp();
+            _statbar.RemoveDisplay();
+            base.Terminate(killer);
+        }
+
+        private void DropExp()
+        {
+            if (SoulDrop > 0)
+            {
+                for (int i = 0; i < SoulDrop; i++)
+                {
+                    SpawnCollectibleNearby(GameManager.Database.Collectibles[1]);
+                }
             }
         }
-        DropExp();
-        _statbar.RemoveDisplay();
-        if(_secret)
+        private void SpawnCollectibleNearby(Bonus collectible, float range = 1)
         {
-            GameManager.Database.UnlockSecret(_secret);
+            var spawned = GameManager.BonusPool.Get(collectible);
+            spawned.transform.position = GetRandomPosNearby(range);
+            spawned.Initialize();
         }
-        base.Terminate(killer);
-    }
-
-    private void DropExp()
-    {
-        if (SoulDrop > 0)
+        private Vector3 GetRandomPosNearby(float range = 1f)
         {
-            for (int i = 0; i < SoulDrop; i++)
+            return transform.position + new Vector3(Random.Range(-range, range), Random.Range(-range, range));
+        }
+    }
+    [System.Serializable]
+    public class EntityStatbar
+    {
+        protected StatBar _display;
+        [SerializeField] bool _versus = false;
+        [SerializeField] bool _spawnBossBar = false;
+        [SerializeField] bool _spawnBar = true;
+
+        public void Initialize(EntityBase entity)
+        {
+            if (_spawnBar && !_display)
             {
-                SpawnCollectibleNearby(GameManager.Database.Collectibles[1]);
+                _display = GameManager.EntityDisplaySpawner.SpawnMobHPBar(entity);
             }
+            if (_spawnBossBar)
+                GameManager.EntityDisplaySpawner.SpawnBossbar(entity);
+            if (_versus)
+                GameObject.FindAnyObjectByType<BossfightUI>().ShowVersus(entity.Splash);
         }
-    }
-    private void SpawnCollectibleNearby(Bonus collectible, float range = 1)
-    {
-        var spawned = GameManager.BonusPool.Get(collectible);
-        spawned.transform.position = GetRandomPosNearby(range);
-        spawned.Initialize();
-    }
-    private Vector3 GetRandomPosNearby(float range = 1f)
-    {
-        return transform.position + new Vector3(Random.Range(-range, range), Random.Range(-range, range));
-    }
-}
-[System.Serializable]
-public class EntityStatbar
-{
-    protected StatBar _display;
-    [SerializeField] bool _versus = false;
-    [SerializeField] bool _spawnBossBar = false;
-    [SerializeField] bool _spawnBar = true;
-
-    public void Initialize(EntityBase entity)
-    {
-        if (_spawnBar && !_display)
+        public void RemoveDisplay()
         {
-            _display = GameManager.EntityDisplaySpawner.SpawnMobHPBar(entity);
+            if (_display)
+                _display.Terminate();
         }
-        if (_spawnBossBar)
-            GameManager.EntityDisplaySpawner.SpawnBossbar(entity);
-        if (_versus)
-            GameObject.FindAnyObjectByType<BossfightUI>().ShowVersus(entity.Splash);
-    }
-    public void RemoveDisplay()
-    {
-        if (_display)
-            _display.Terminate();
     }
 }

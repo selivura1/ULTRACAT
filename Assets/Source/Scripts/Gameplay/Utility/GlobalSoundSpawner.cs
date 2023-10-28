@@ -1,43 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-public enum SoundType
+namespace Ultracat
 {
-    Effect,
-    Music,
-    Enemy,
-}
-
-public class GlobalSoundSpawner : MonoBehaviour
-{
-    [SerializeField] AudioClip spawned;
-    [SerializeField] AudioSource[] _sources;
-    private Options options;
-    
-    void GetReferences()
+    public enum SoundType
     {
-        options = GameManager.Options;
+        Effect,
+        Music,
+        Enemy,
     }
-    public void PlaySound(AudioClip sound, SoundType type, float pitchMin = 0.9f, float pitchMax = 1.1f)
+
+    public class GlobalSoundSpawner : MonoBehaviour
     {
-        if (options == null)
-            GetReferences();
-        float cfg = 0;
-        switch (type)
+        [SerializeField] AudioClip spawned;
+        [SerializeField] AudioSource[] _sources;
+        private Options options;
+
+        void GetReferences()
         {
-            case SoundType.Effect:
-                cfg = options.CurrentConfig.SFX;
-                break;
-            case SoundType.Music:
-                cfg = options.CurrentConfig.Music;
-                break;
-            case SoundType.Enemy:
-                cfg = options.CurrentConfig.EnemySFX;
-                break;
-            default:
-                break;
+            options = GameManager.Options;
         }
-        _sources[(int)type].pitch = Random.Range(pitchMin, pitchMax);
-        _sources[(int)type].PlayOneShot(sound, cfg);
+        public void PlaySound(AudioClip sound, SoundType type, float pitchMin = 0.9f, float pitchMax = 1.1f)
+        {
+            if (options == null)
+                GetReferences();
+            float cfg = 0;
+            switch (type)
+            {
+                case SoundType.Effect:
+                    cfg = options.CurrentConfig.SFX;
+                    break;
+                case SoundType.Music:
+                    cfg = options.CurrentConfig.Music;
+                    break;
+                case SoundType.Enemy:
+                    cfg = options.CurrentConfig.EnemySFX;
+                    break;
+                default:
+                    break;
+            }
+            _sources[(int)type].pitch = Random.Range(pitchMin, pitchMax);
+            _sources[(int)type].PlayOneShot(sound, cfg);
+        }
     }
 }

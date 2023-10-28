@@ -1,52 +1,55 @@
 ﻿using UnityEngine;
 
-public class CharacterEffects : MonoBehaviour
+namespace Ultracat
 {
-    protected EntityBase entity;
-    [SerializeField] EffectHandler[] onDeathEffects;
-    [SerializeField] EffectHandler[] onDeathRandomEffects;
-    [SerializeField] EffectHandler[] onDanageRandomEffects;
-    [SerializeField] EffectHandler[] onHealEffects;
-    protected virtual void Start()
+    public class CharacterEffects : MonoBehaviour
     {
-        entity = GetComponent<EntityBase>();
-        if (entity)
+        protected EntityBase entity;
+        [SerializeField] EffectHandler[] onDeathEffects;
+        [SerializeField] EffectHandler[] onDeathRandomEffects;
+        [SerializeField] EffectHandler[] onDanageRandomEffects;
+        [SerializeField] EffectHandler[] onHealEffects;
+        protected virtual void Start()
         {
-            entity.onDeath += SpawnDeathEffects;
-            entity.onDamage += SpawnDamageEffects;
-           // entity.onHeal += SpawnHealthEffect;
+            entity = GetComponent<EntityBase>();
+            if (entity)
+            {
+                entity.onDeath += SpawnDeathEffects;
+                entity.onDamage += SpawnDamageEffects;
+                // entity.onHeal += SpawnHealthEffect;
+            }
         }
-    }
-    protected virtual void OnDestroy()
-    {
-        if (entity)
+        protected virtual void OnDestroy()
         {
-            entity.onDeath -= SpawnDeathEffects;
-            //entity.onHeal -= SpawnHealthEffect;
+            if (entity)
+            {
+                entity.onDeath -= SpawnDeathEffects;
+                //entity.onHeal -= SpawnHealthEffect;
+            }
         }
-    }
-    public void SpawnDamageEffects(DamageBreakDown da)
-    {
+        public void SpawnDamageEffects(DamageBreakDown da)
+        {
 
-        if (onDanageRandomEffects.Length > 0)
-            GameManager.EffectsPool.Get(onDanageRandomEffects[Random.Range(0, onDanageRandomEffects.Length)]).transform.position = transform.position;
-    }
-    public void SpawnDeathEffects(EntityBase fix)
-    {
-        foreach (var item in onDeathEffects)
-        {
-            GameManager.EffectsPool.Get(item).transform.position = transform.position;
+            if (onDanageRandomEffects.Length > 0)
+                GameManager.EffectsPool.Get(onDanageRandomEffects[Random.Range(0, onDanageRandomEffects.Length)]).transform.position = transform.position;
         }
-        if(onDeathRandomEffects.Length > 0)
-        GameManager.EffectsPool.Get(onDeathRandomEffects[Random.Range(0, onDeathRandomEffects.Length)]).transform.position = transform.position;
-    }
-    public void SpawnHealthEffect(float amount)
-    {
-        foreach (var item in onHealEffects)
+        public void SpawnDeathEffects(EntityBase fix)
         {
-            var spawned = GameManager.EffectsPool.Get(item);
-            spawned.transform.SetParent(transform);
-            spawned.transform.localPosition = Vector3.zero;
+            foreach (var item in onDeathEffects)
+            {
+                GameManager.EffectsPool.Get(item).transform.position = transform.position;
+            }
+            if (onDeathRandomEffects.Length > 0)
+                GameManager.EffectsPool.Get(onDeathRandomEffects[Random.Range(0, onDeathRandomEffects.Length)]).transform.position = transform.position;
+        }
+        public void SpawnHealthEffect(float amount)
+        {
+            foreach (var item in onHealEffects)
+            {
+                var spawned = GameManager.EffectsPool.Get(item);
+                spawned.transform.SetParent(transform);
+                spawned.transform.localPosition = Vector3.zero;
+            }
         }
     }
 }

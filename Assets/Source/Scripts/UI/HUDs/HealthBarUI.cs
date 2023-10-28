@@ -1,33 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-//Player's HP bar HUD script
-public class HealthBarUI : MonoBehaviour
+namespace Ultracat
 {
-    [SerializeField] ProgressBar _healthBar;
-    EntityBase _player;
-    private void Start()
+    //Player's HP bar HUD script
+    public class HealthBarUI : MonoBehaviour
     {
-        _player = GameManager.PlayerSpawner.GetPlayer();
-        if (_player)
+        [SerializeField] ProgressBar _healthBar;
+        EntityBase _player;
+        private void Start()
         {
-            _player.onHealthChanged += UpdateBars;
-            UpdateBars();
+            _player = GameManager.PlayerSpawner.GetPlayer();
+            if (_player)
+            {
+                _player.onHealthChanged += UpdateBars;
+                UpdateBars();
+            }
+        }
+        private void OnDestroy()
+        {
+            if (_player)
+            {
+                _player.onHealthChanged -= UpdateBars;
+                UpdateBars();
+            }
+        }
+        private void UpdateBars(float hp = 0)
+        {
+            _healthBar.Max = _player.EntityStats.Health.Value;
+            _healthBar.CurrentValue = _player.GetHealth();
+            _healthBar.Min = 0;
         }
     }
-    private void OnDestroy()
-    {
-        if (_player)
-        {
-            _player.onHealthChanged -= UpdateBars;
-            UpdateBars();
-        }
-    }
-    private void UpdateBars(float hp = 0)
-    {
-        _healthBar.Max = _player.EntityStats.Health.Value;
-        _healthBar.CurrentValue = _player.GetHealth();
-        _healthBar.Min = 0;
-    }
-} 
+}

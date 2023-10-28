@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,11 +54,11 @@ public class ModalWindowPanel : MonoBehaviour
     }
     private void Close()
     {
-        LeanTween.scale(gameObject, Vector3.zero, 1).setIgnoreTimeScale(true); 
+        transform.localScale = Vector3.zero;
     }
 
-    public void ShowAsItemUnlock(string title, Sprite imageToShowm, string message, 
-        string confirmText, string cancelText, string altText, 
+    public void ShowAsItemUnlock(string title, Sprite imageToShowm, string message,
+        string confirmText, string cancelText, string altText,
         Action confirmAction, Action cancelAction, Action alterAction)
     {
         _horizontalLayoutArea.gameObject.SetActive(false);

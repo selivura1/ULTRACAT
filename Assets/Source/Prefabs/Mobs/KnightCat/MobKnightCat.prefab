@@ -63,12 +63,11 @@ MonoBehaviour:
   Splash: {fileID: 0}
   name: KnightCat
   currentHealth: 0
-  MaxHealthLimit: 200
   EntityStats:
     Attack:
       BaseValue: 20
     Health:
-      BaseValue: 40
+      BaseValue: 70
     Speed:
       BaseValue: 245
     BonusChance:
@@ -87,7 +86,6 @@ MonoBehaviour:
     _versus: 0
     _spawnBossBar: 0
     _spawnBar: 1
-  _secret: {fileID: 0}
 --- !u!114 &530687969782541583
 MonoBehaviour:
   m_ObjectHideFlags: 0

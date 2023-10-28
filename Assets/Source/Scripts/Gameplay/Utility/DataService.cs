@@ -1,7 +1,5 @@
 using Newtonsoft.Json;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -9,11 +7,12 @@ public class DataService : IDataService
 {
     public T LoadData<T>(string relativePath)
     {
-        string path = Application.persistentDataPath + relativePath;
+        string path = Application.persistentDataPath + "/" + relativePath;
         if (!File.Exists(path))
             throw new FileNotFoundException($"{path} does nor exists.");
         try
         {
+            Debug.Log($"Loading from {relativePath}");
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
             return data;
         }
@@ -26,10 +25,10 @@ public class DataService : IDataService
 
     public bool SaveData<T>(string relativePath, T data)
     {
-        string path = Application.persistentDataPath + relativePath;
+        string path = Application.persistentDataPath + "/" + relativePath;
         try
         {
-            Debug.Log("Saving...");
+            Debug.Log($"Saving to {relativePath}");
             if (File.Exists(path))
                 File.Delete(path);
             using FileStream stream = File.Create(path);

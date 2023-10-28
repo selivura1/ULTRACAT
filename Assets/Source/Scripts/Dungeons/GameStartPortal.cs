@@ -1,21 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 //Trigger for game start in lobby
-public class GameStartPortal : MonoBehaviour
+namespace Ultracat
 {
-    private FadeUI _fade;
-    private void Start()
+    public class GameStartPortal : MonoBehaviour
     {
-        _fade = FindAnyObjectByType<FadeUI>();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.GetComponent<PlayerEntity>())
+        private FadeUI _fade;
+        private void Start()
         {
-            GameStarter.StartGame();
-            _fade.Fade();
+            _fade = FindAnyObjectByType<FadeUI>();
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.GetComponent<PlayerEntity>())
+            {
+                GameStarter.StartGame();
+                _fade.Fade();
+            }
         }
     }
 }

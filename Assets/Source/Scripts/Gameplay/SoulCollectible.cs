@@ -1,12 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class SoulCollectible : Bonus
+namespace Ultracat
 {
-    public override void OnCollected()
+    public class SoulCollectible : Bonus
     {
-        _target.GetComponent<PlayerLevels>().AddExperience((int)_value);
-        gameObject.SetActive(false);
+        public override void OnCollected()
+        {
+            _target.GetComponent<PlayerLevels>().AddExperience((int)_value);
+            gameObject.SetActive(false);
+        }
     }
 }
