@@ -7,7 +7,10 @@ namespace Ultracat
         public float BarrageChance = 25;
         public float ZoneAttackChance = 50;
         public float RangedAttackRange = 10;
-        public string TeleportAttack = "Attack1", ZoneAttack = "ZoneAttack", BarrageAttack = "Barrage", RangeAttack = "RangeAttack";
+        public string TeleportAttack = "Attack1";
+        public string ZoneAttack = "ZoneAttack";
+        public string BarrageAttack = "Barrage";
+        public string RangeAttack = "RangeAttack";
         public float Stamina = 3;
         public float StaminaMax = 3;
         public float StaminaRegen = 1;

@@ -13,7 +13,7 @@ using Thread = System.Threading.Thread;
 #endif
 
 [ExecuteInEditMode]
-[AddComponentMenu("Pathfinding/Pathfinder")]
+[AddComponentMenu("Pathfinding/AstarPath")]
 /// <summary>
 /// Core component for the A* %Pathfinding System.
 /// This class handles all of the pathfinding system, calculates all paths and stores the info.\n

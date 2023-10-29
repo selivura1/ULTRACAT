@@ -1,13 +1,20 @@
+using Ultracat;
 using UnityEngine;
 
-//Script for room transition effect
 [RequireComponent(typeof(Animator))]
 public class FadeUI : MonoBehaviour
 {
     Animator animator;
-    private void Awake()
+    [SerializeField] DungeonGenerator _dungeonGenerator;
+    private void Start()
     {
+        _dungeonGenerator = FindAnyObjectByType<DungeonGenerator>();
         animator = GetComponent<Animator>();
+        _dungeonGenerator.onRoomSpawned += Fade;
+    }
+    private void OnDestroy()
+    {
+        _dungeonGenerator.onRoomSpawned -= Fade;
     }
     public void Fade()
     {
