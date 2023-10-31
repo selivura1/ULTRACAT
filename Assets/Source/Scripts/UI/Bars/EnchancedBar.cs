@@ -4,8 +4,6 @@ using UnityEngine;
 public class EnchancedBar : ProgressBar
 {
     public RectTransform _maskTransform;
-    public float ValuePerUnit = .32f;
-    public float MaxSize = 224;
     public float MaxDelta = 1;
     float timer = 0;
     float _lastCurrent;

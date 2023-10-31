@@ -15,7 +15,7 @@ namespace Ultracat
         private void Start()
         {
             PlayerControl.cancelInput += EscapeButton;
-            GameManager.PlayerSpawner.GetPlayer().onDeath += OnPlayerDeath;
+            FindAnyObjectByType<PlayerEntity>().onDeath += OnPlayerDeath;
         }
         private void OnDestroy()
         {

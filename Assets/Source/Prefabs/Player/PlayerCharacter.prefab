@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 8427230228473258506}
   - component: {fileID: 8427230228473258507}
   - component: {fileID: 8427230228473258510}
-  - component: {fileID: 1313663241294026812}
   - component: {fileID: 8569852584166753156}
   - component: {fileID: 8461311019365608516}
   - component: {fileID: 4888875701138727103}
@@ -37,6 +36,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427230228473258515}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -47,7 +47,6 @@ Transform:
   - {fileID: 8427230229215120828}
   - {fileID: 6640897631359351225}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &8427230228473258517
 Rigidbody2D:
@@ -66,6 +65,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 6486f51e379d0c341a736aaa1f520575, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -78,11 +83,32 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427230228473258515}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: 0.026173025, y: 0.013476938}
   m_Size: {x: 0.73317736, y: 0.73317736}
   m_Direction: 0
@@ -128,7 +154,6 @@ MonoBehaviour:
   Splash: {fileID: 21300000, guid: cbd78096cfafef84b8d92eaf00c87f5f, type: 3}
   name: Cat
   currentHealth: 100
-  MaxHealthLimit: 1000
   EntityStats:
     Attack:
       BaseValue: 5
@@ -162,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!95 &8427230228473258507
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -176,6 +201,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -194,19 +220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PotionEffects: []
---- !u!114 &1313663241294026812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427230228473258515}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6121540756b0e554ea51064416d2c29c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  time: 0.5
 --- !u!114 &8569852584166753156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,8 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9010166bae3d164e99e8e13a0d21e24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Tokens: 0
   scaling: 8
   startExpToNextLevel: 8
+  RandomItems: []
 --- !u!114 &4888875701138727103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37165ebf5a0bb2540810067e69782be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killSounds:
-  - {fileID: 8300000, guid: 5c0ce705d7c5a3042aa98ab4ef734413, type: 3}
+  killSounds: []
   damagedSounds:
   - {fileID: 8300000, guid: 8ecbf3bc57cef7842b9ae293dba628d4, type: 3}
   healedSounds:
@@ -275,6 +289,7 @@ MonoBehaviour:
   - {fileID: 1277932784109806941, guid: 778874611d637a448adfa5cb003e6bcf, type: 3}
   onDeathRandomEffects:
   - {fileID: 4112654119015310587, guid: 4fe57ce680f318f4d835c5e954a9fa63, type: 3}
+  onDanageRandomEffects: []
   onHealEffects:
   - {fileID: 8837259449863384722, guid: cbd6ab7a45800824e855ce064ced09be, type: 3}
   levelUpEffects:
@@ -398,13 +413,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427230228697905509}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8427230228473258519}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8427230228783242762
 GameObject:
@@ -430,13 +445,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427230228783242762}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8427230228473258519}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8427230228783242764
 SpriteRenderer:
@@ -513,19 +528,20 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8427230229215120827}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8427230228473258519}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &34880341861237367
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8427230228473258519}
     m_Modifications:
     - target: {fileID: 6652624006851640270, guid: 12c505343e9bd7940afb33c7ad5fa968, type: 3}
@@ -577,6 +593,9 @@ PrefabInstance:
       value: Shadow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c505343e9bd7940afb33c7ad5fa968, type: 3}
 --- !u!4 &6640897631359351225 stripped
 Transform:

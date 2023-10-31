@@ -13,7 +13,7 @@ namespace Ultracat
         PlayerLevels _levels;
         private void Start()
         {
-            _levels = GameManager.PlayerSpawner.GetPlayer().GetComponent<PlayerLevels>();
+            _levels = FindAnyObjectByType<PlayerEntity>().GetComponent<PlayerLevels>();
             _levels.onItemsGenerated += Refresh;
         }
         private void OnDestroy()
