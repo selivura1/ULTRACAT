@@ -179,14 +179,13 @@ MonoBehaviour:
   Splash: {fileID: 21300000, guid: a275053085571b544b61528753799e43, type: 3}
   name: The Ruined CAT
   currentHealth: 0
-  MaxHealthLimit: 1000
   EntityStats:
     Attack:
       BaseValue: 35
     Health:
       BaseValue: 500
     Speed:
-      BaseValue: 200
+      BaseValue: 5
     BonusChance:
       BaseValue: 0
     Omnivamp:
@@ -203,7 +202,6 @@ MonoBehaviour:
     _versus: 1
     _spawnBossBar: 1
     _spawnBar: 0
-  _secret: {fileID: 11400000, guid: da137adadfb630441a804dd33d74e2dc, type: 2}
 --- !u!114 &1227064001579169859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +456,6 @@ MonoBehaviour:
   - Attack3
   - Attack4
   _shootSound: {fileID: 8300000, guid: a7cd94bd95ba67940889b17d70b1022e, type: 3}
-  _attackTrackSound: {fileID: 8300000, guid: 8f0867da91313b8489a0bafa3151820f, type: 3}
   _ghostSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
 --- !u!1 &2651839597461786049
 GameObject:

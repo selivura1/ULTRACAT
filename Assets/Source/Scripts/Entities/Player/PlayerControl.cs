@@ -10,7 +10,7 @@ namespace Ultracat
         Inventory _inventory;
         PlayerInput _input;
         Vector2 dir;
-        public static bool enableIngameControls = true;
+        public static bool EnableIngameControls = true;
         public static PlayerControl Singleton;
         public static System.Action submitInput;
         public static System.Action cancelInput;
@@ -35,7 +35,7 @@ namespace Ultracat
         public void MoveInput(InputAction.CallbackContext act)
         {
             dir = Vector2.zero;
-            if (enableIngameControls)
+            if (EnableIngameControls)
                 dir = new Vector2(act.ReadValue<Vector2>().x, act.ReadValue<Vector2>().y);
         }
         public void SubmitInput(InputAction.CallbackContext act)
@@ -50,12 +50,12 @@ namespace Ultracat
         }
         public void SkillInput(InputAction.CallbackContext act)
         {
-            if (!enableIngameControls) return;
+            if (!EnableIngameControls) return;
             _inventory.ActivateArtifact();
         }
         private void Update()
         {
-            if (!enableIngameControls) return;
+            if (!EnableIngameControls) return;
             if (_input.actions.FindAction("Fire").IsPressed())
             {
                 _combat.StartAttack(GetMouseDirection(_combat.transform.position), _inventory.Weapon);

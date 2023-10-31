@@ -6,9 +6,20 @@ namespace Ultracat
 {
     public class Projectile : MonoBehaviour
     {
-        [SerializeField] protected float lifetime = 1;
-        [HideInInspector] public float CurrentSpeed = 500;
-        [SerializeField] protected float speed = 500;
+        [SerializeField] protected float distance = 15;
+        [SerializeField] protected float baseLifetime = 0f;
+        [SerializeField] protected float lifetime 
+        { 
+            get 
+            { 
+                if(CurrentSpeed > 0)
+                return baseLifetime + distance / CurrentSpeed; 
+                else
+                    return baseLifetime;
+            } 
+        }
+        [HideInInspector] public float CurrentSpeed = 5;
+        [SerializeField] protected float speed = 5;
         [SerializeField] private bool _destroyOnFirstTarget = true;
         [SerializeField] private bool _melee = false;
         [SerializeField] private bool _enemy = false;
@@ -142,7 +153,7 @@ namespace Ultracat
         }
         public virtual void MovementPerFixedUpdate()
         {
-            rigidbody.velocity = transform.right * CurrentSpeed * Time.fixedDeltaTime;
+            rigidbody.velocity = transform.right * CurrentSpeed;
         }
         public virtual void CountdownTimer()
         {

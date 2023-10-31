@@ -20,7 +20,7 @@ namespace Ultracat
             if (dir.magnitude > 0)
                 transform.localScale = Combat.SetScaleByDirection(dir);
             if (CanMove)
-                _rb.velocity = dir.normalized * entity.EntityStats.Speed.Value * Time.deltaTime;
+                _rb.velocity = dir.normalized * entity.EntityStats.Speed.Value;
             if (_anim)
                 _anim.SetFloat("Speed", dir.magnitude);
         }

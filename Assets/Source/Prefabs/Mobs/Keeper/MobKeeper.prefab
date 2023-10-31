@@ -147,14 +147,13 @@ MonoBehaviour:
   Splash: {fileID: 21300000, guid: 9db9ee13f5cdd9f47a3a42c21344b394, type: 3}
   name: Gate keeper
   currentHealth: 0
-  MaxHealthLimit: 1000
   EntityStats:
     Attack:
       BaseValue: 12
     Health:
       BaseValue: 200
     Speed:
-      BaseValue: 190
+      BaseValue: 4
     BonusChance:
       BaseValue: 0
     Omnivamp:
@@ -171,7 +170,6 @@ MonoBehaviour:
     _versus: 0
     _spawnBossBar: 0
     _spawnBar: 1
-  _secret: {fileID: 0}
 --- !u!114 &5501555981851068549
 MonoBehaviour:
   m_ObjectHideFlags: 0

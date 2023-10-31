@@ -94,7 +94,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
       propertyPath: CollectibleChance.Value
-      value: 75
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
       propertyPath: m_Name

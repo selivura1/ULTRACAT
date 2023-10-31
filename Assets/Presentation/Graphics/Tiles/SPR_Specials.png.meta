@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8c61056b428c0f647b5eca2be350fbe5
+guid: 186d212ec7a17d244a5013407e35a9cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,7 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  swizzle: 50462976
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -117,22 +119,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GunShopUI_0
+      name: Specials_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 94
-        width: 22
-        height: 21
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a15bd72e50cd7a34b903c3957f0917d2
-      internalID: -1808095161
+      spriteID: ae4d8df3b1711314783d07487287bc47
+      internalID: 1725622045
       vertices: []
       indices: 
       edges: []
@@ -148,20 +150,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GunShopUI_0: -1808095161
-      GunShopUI_1: 1780697060
-      GunShopUI_10: 1032108640
-      GunShopUI_2: 626432926
-      GunShopUI_3: -1245790754
-      GunShopUI_4: -177330131
-      GunShopUI_5: 757961971
-      GunShopUI_6: 1723567406
-      GunShopUI_7: -1765658758
-      GunShopUI_8: -1343475519
-      GunShopUI_9: -663699152
-  spritePackingTag: 
+      Specials_0: 1725622045
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

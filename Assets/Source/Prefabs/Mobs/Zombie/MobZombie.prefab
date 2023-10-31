@@ -69,7 +69,7 @@ MonoBehaviour:
     Health:
       BaseValue: 60
     Speed:
-      BaseValue: 245
+      BaseValue: 5
     BonusChance:
       BaseValue: 0
     Omnivamp:

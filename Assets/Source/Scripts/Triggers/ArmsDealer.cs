@@ -1,4 +1,3 @@
-//Trigger to open weapon selector
 namespace Ultracat
 {
     public class ArmsDealer : Trigger

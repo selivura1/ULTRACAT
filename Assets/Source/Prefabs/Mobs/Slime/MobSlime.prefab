@@ -178,14 +178,13 @@ MonoBehaviour:
   Splash: {fileID: 0}
   name: Slime
   currentHealth: 0
-  MaxHealthLimit: 200
   EntityStats:
     Attack:
       BaseValue: 10
     Health:
       BaseValue: 25
     Speed:
-      BaseValue: 325
+      BaseValue: 5
     BonusChance:
       BaseValue: 0
     Omnivamp:
@@ -202,7 +201,6 @@ MonoBehaviour:
     _versus: 0
     _spawnBossBar: 0
     _spawnBar: 1
-  _secret: {fileID: 0}
 --- !u!114 &8875758207206119242
 MonoBehaviour:
   m_ObjectHideFlags: 0

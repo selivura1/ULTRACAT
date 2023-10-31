@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a29694cabb3039b40bc3979a01f55ccc
+guid: 9459dfcce74f94c4fb06d289bb4308cf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
@@ -117,11 +119,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CubesNormal_0
+      name: Gates_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 480
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -131,18 +133,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbbebd2aac064a04285b0d476e7a9157
-      internalID: 1434401111
+      spriteID: d19c085bdbc56c14389fddef2e64f8ff
+      internalID: 1752987881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubesNormal_1
+      name: Gates_1
       rect:
         serializedVersion: 2
         x: 32
-        y: 480
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -152,18 +154,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c1293e9be38e2a4bad453082c39c3f6
-      internalID: -1524289378
+      spriteID: b917589868c192748a14f50142b392c8
+      internalID: -1823614227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubesNormal_2
+      name: Gates_2
       rect:
         serializedVersion: 2
         x: 64
-        y: 480
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -173,18 +175,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74f1f4d92cd4df1498ddadee968ead31
-      internalID: -539056139
+      spriteID: b453ac2a7ed58354184d984c2de8ece9
+      internalID: 1398618919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubesNormal_3
+      name: Gates_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4299a98450cf4dc40bdbc98313b2f80d
+      internalID: -900621704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_4
       rect:
         serializedVersion: 2
         x: 128
-        y: 480
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -194,18 +217,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b633a6b0c95d96459a9d5daa541e8eb
-      internalID: 57199942
+      spriteID: 7d8dd45fb1c98cf4a9ceedf300c33c12
+      internalID: 195803938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubesNormal_4
+      name: Gates_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 448
+        x: 160
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -215,18 +238,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c8ca03cee1c1364594b45b5cb0b0aff
-      internalID: -1595729188
+      spriteID: 7ebcb8f9b6ef6ff43911636423e65be9
+      internalID: 1320366869
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CubesNormal_5
+      name: Gates_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 448
+        x: 192
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -236,8 +259,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 894f6dbdd28e39f4d9ac628cb57009e8
-      internalID: -1068112313
+      spriteID: 9fff887f15cc0054ba8e3791734d5e81
+      internalID: 361725620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4b9c33ab20f5543958f64c8bfb1919
+      internalID: -136212211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd89ad2c6561f744bac8c6a96253bce
+      internalID: -1535630737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9e24eb07f35c14a8337018b1f413f6
+      internalID: 1982880398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1099c230826007941810b6d9b757c563
+      internalID: -1222193253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599a388daac9e614b82ec5be2d886e31
+      internalID: -1653919178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gates_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405e1371cef064746afb72a1bd9e8f3e
+      internalID: 387125021
       vertices: []
       indices: 
       edges: []
@@ -253,15 +402,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CubesNormal_0: 1434401111
-      CubesNormal_1: -1524289378
-      CubesNormal_2: -539056139
-      CubesNormal_3: 57199942
-      CubesNormal_4: -1595729188
-      CubesNormal_5: -1068112313
-  spritePackingTag: 
+      Gates_0: 1752987881
+      Gates_1: -1823614227
+      Gates_10: -1222193253
+      Gates_11: -1653919178
+      Gates_12: 387125021
+      Gates_2: 1398618919
+      Gates_3: -900621704
+      Gates_4: 195803938
+      Gates_5: 1320366869
+      Gates_6: 361725620
+      Gates_7: -136212211
+      Gates_8: -1535630737
+      Gates_9: 1982880398
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

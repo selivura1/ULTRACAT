@@ -916,15 +916,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.0020491802
+    y: 0.0018214936
+    width: 0.9959016
+    height: 0.9945355
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 5.6875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1137,6 +1137,14 @@ PrefabInstance:
     - target: {fileID: 8427230228473258519, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461311019365608516, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
+      propertyPath: scaling
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461311019365608516, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
+      propertyPath: startExpToNextLevel
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6386,6 +6394,7 @@ MonoBehaviour:
   - {fileID: 5785839044771608846, guid: 3acf64ceb56dba149b7fad431ec16849, type: 3}
   - {fileID: 5785839044771608846, guid: 6bd626db878133442bf00184f254fa30, type: 3}
   - {fileID: 5785839044771608846, guid: 9094a58034efb7840a48dcb59be07027, type: 3}
+  - {fileID: 775320628511699931, guid: 210f3f231efb9434c80bd9e73229d258, type: 3}
   _usableItems:
   - {fileID: 5785839044771608846, guid: 00bf810c586cbc74e81b85f1049a30ba, type: 3}
   - {fileID: 5785839044771608846, guid: 4a90fc101d914fc44a2f798a21fb634a, type: 3}
@@ -6394,6 +6403,7 @@ MonoBehaviour:
   - {fileID: 5785839044771608846, guid: 1a87efc1a50658d4cb7eff0ea0676a18, type: 3}
   - {fileID: 5785839044771608846, guid: 6bd626db878133442bf00184f254fa30, type: 3}
   - {fileID: 5785839044771608846, guid: 9094a58034efb7840a48dcb59be07027, type: 3}
+  - {fileID: 775320628511699931, guid: 210f3f231efb9434c80bd9e73229d258, type: 3}
   _activeItems:
   - {fileID: -7419470547547932048, guid: d84386249012772498a37f427aeea57d, type: 3}
   _usableActiveItems:
@@ -6406,6 +6416,7 @@ MonoBehaviour:
   - {fileID: 6077948248582158548, guid: 7e8fd11d434620141bdfdcf0103ab954, type: 3}
   _usableWeapons:
   - {fileID: 6301284751497506464, guid: a5a1705d1bc8804488dd4340756fe80c, type: 3}
+  - {fileID: 5199879139131338356, guid: 5ce609348ba2f0b42b559f0eb3478374, type: 3}
   Collectibles:
   - {fileID: 4403590385786661474, guid: cffa224e20e07654295bb440de25ccde, type: 3}
   - {fileID: 3579766001363599379, guid: 6abf6392d32e35e4e91dcb5aadec04b1, type: 3}
@@ -8596,7 +8607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590015804034630122, guid: 73cb9c46616db8f4c98e992e6448c6ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 18.005001
       objectReference: {fileID: 0}
     - target: {fileID: 3590015804034630122, guid: 73cb9c46616db8f4c98e992e6448c6ad, type: 3}
       propertyPath: m_AnchoredPosition.y

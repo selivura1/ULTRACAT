@@ -63,14 +63,13 @@ MonoBehaviour:
   Splash: {fileID: 0}
   name: Mage with gun
   currentHealth: 0
-  MaxHealthLimit: 1000
   EntityStats:
     Attack:
       BaseValue: 20
     Health:
       BaseValue: 25
     Speed:
-      BaseValue: 200
+      BaseValue: 2
     BonusChance:
       BaseValue: 0
     Omnivamp:
@@ -87,7 +86,6 @@ MonoBehaviour:
     _versus: 0
     _spawnBossBar: 0
     _spawnBar: 1
-  _secret: {fileID: 0}
 --- !u!114 &8966780063603814942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,10 +103,10 @@ MonoBehaviour:
   _minIdleTime: 0.5
   _maxWalkTime: 3
   _nextWaypointDistance: 0.3
-  _visionRange: 8
+  _visionRange: 15
   _reachedEndOfPath: 0
   _prepareTime: 0.2
-  _attackRange: 6
+  _attackRange: 14
   _preparing: 0
   currentTurn: 1
   _wallMask:

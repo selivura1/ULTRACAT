@@ -8,7 +8,7 @@ namespace Ultracat
         public static void Restart()
         {
             TimeControl.SetPause(false);
-            PlayerControl.enableIngameControls = true;
+            PlayerControl.EnableIngameControls = true;
             Score.ResetScore();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }

@@ -77,9 +77,15 @@ namespace Ultracat
         public void PauseIfWindowOpened()
         {
             if (_openedWindows.Count > 0)
+            {
+                PlayerControl.EnableIngameControls = false;
                 TimeControl.SetPause(true);
+            }
             else
+            {
+                PlayerControl.EnableIngameControls = true;
                 TimeControl.SetPause(false);
+            }
         }
     }
 }

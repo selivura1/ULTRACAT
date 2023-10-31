@@ -63,14 +63,13 @@ MonoBehaviour:
   Splash: {fileID: -1184000222, guid: 4c3f7700ec64dec4abb0bfbe141a50ee, type: 3}
   name: DEMONICA
   currentHealth: 0
-  MaxHealthLimit: 1000
   EntityStats:
     Attack:
       BaseValue: 25
     Health:
       BaseValue: 400
     Speed:
-      BaseValue: 200
+      BaseValue: 5
     BonusChance:
       BaseValue: 0
     Omnivamp:
@@ -87,7 +86,6 @@ MonoBehaviour:
     _versus: 1
     _spawnBossBar: 1
     _spawnBar: 0
-  _secret: {fileID: 11400000, guid: f7216c5502fccb94bacb58a816c23912, type: 2}
 --- !u!114 &4962914425388498274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +332,6 @@ MonoBehaviour:
   _zoneAttackRange: 3
   _zoneAttackDamageMultiplier: 2
   _zoneAttackAmount: 3
-  _zoneAttackAmountEnraged: 6
   _zoneAttack: {fileID: 1635195385614678764, guid: 2456ed1f0dca173499de2a6328d0350f, type: 3}
   _meleeAttackProjectile: {fileID: 5355365781319234486, guid: f7d2114d2d2c99c4db20c83d2b5ed260, type: 3}
   _rangeAttackProjectile: {fileID: 1060391164198894900, guid: 1c689e496136ecb45b089f88dec1199e, type: 3}

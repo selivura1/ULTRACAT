@@ -19,7 +19,7 @@ namespace Ultracat
         //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            _movement.Move((_player.transform.position - animator.transform.position).normalized);
+            _movement.Move((_player.transform.position - animator.transform.position).normalized * Time.deltaTime);
             var dist = Vector2.Distance(_player.transform.position, _movement.transform.position);
             if (dist < MeleeAttackRange)
             {

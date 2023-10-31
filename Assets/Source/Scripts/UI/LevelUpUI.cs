@@ -14,11 +14,13 @@ namespace Ultracat
         private void Start()
         {
             _levels = FindAnyObjectByType<PlayerEntity>().GetComponent<PlayerLevels>();
-            _levels.onItemsGenerated += Refresh;
+            _levels.onLevelUp += Refresh;
+            _levels.onItemsChanged += Refresh;
         }
         private void OnDestroy()
         {
-            _levels.onItemsGenerated -= Refresh;
+            _levels.onLevelUp -= Refresh;
+            _levels.onItemsChanged -= Refresh;
         }
         public void SelectItem(int index)
         {

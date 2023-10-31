@@ -16,11 +16,12 @@ namespace Ultracat
         public System.Action onLevelUp;
         public System.Action onExperienceChange;
         public System.Action onTokenUsed;
-        public System.Action onItemsGenerated;
+        public System.Action onItemsChanged;
         private void Awake()
         {
             ExperienceToNextLevel = startExpToNextLevel;
             _player = GetComponent<PlayerEntity>();
+            GenerateNewRandomItems();
         }
         private void Update()
         {
@@ -51,7 +52,6 @@ namespace Ultracat
                 Level++;
                 ExperienceToNextLevel += Level * scaling;
                 Tokens++;
-                GenerateNewRandomItems();
                 onLevelUp?.Invoke();
             }
         }
@@ -69,13 +69,14 @@ namespace Ultracat
                 UsedItems.Add(generated);
             }
             UsedItems.Clear();
-            onItemsGenerated?.Invoke();
+            onItemsChanged?.Invoke();
         }
         public void UseToken(int index)
         {
             Tokens--;
             _player.GetComponent<Inventory>().Give(RandomItems[index]);
             _player.Heal(999);
+            GenerateNewRandomItems();
             onTokenUsed?.Invoke();
         }
     }

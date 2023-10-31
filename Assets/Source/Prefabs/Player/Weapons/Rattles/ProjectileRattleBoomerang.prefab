@@ -76,9 +76,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112cbe55e046c5044a53b2eca5d1f7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 0.4
+  distance: 15
+  baseLifetime: 0
   CurrentSpeed: 500
-  speed: 1500
+  speed: 25
   _destroyOnFirstTarget: 0
   _melee: 0
   _enemy: 0
