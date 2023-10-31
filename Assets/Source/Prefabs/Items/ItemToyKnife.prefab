@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4889456753175532709, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
@@ -52,73 +53,31 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      propertyPath: Icon
+      value: 
+      objectReference: {fileID: 784130947, guid: 61fe96cf8b07abc45851f6776c23bc2b, type: 3}
+    - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      propertyPath: name
+      value: Toy knife
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      propertyPath: Attack.Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
       propertyPath: Description
-      value: 'Big sword from one of floppa''s warriors
-
-        +DMG'
+      value: Still hurts
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      propertyPath: Attack.Value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
       propertyPath: m_Name
-      value: ItemFastKiller
+      value: ItemToyKnife
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
---- !u!1 &5785839044771608847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
-  m_PrefabInstance: {fileID: 1410113724783259048}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-7854689714605681609
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5785839044771608847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db4e77f6fd761734192e5edaaa0800ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Wind blade
-  Description: 'Destroy them with wind speed
-
-    +Damage
-
-    +Movement speed'
-  Attack:
-    Value: 0.25
-    Type: 0
-    Order: 0
-  Health:
-    Value: 0
-    Type: 0
-    Order: 0
-  Speed:
-    Value: 0.05
-    Type: 1
-    Order: 0
-  CollectibleChance:
-    Value: 0
-    Type: 0
-    Order: 0
-  Omnivamp:
-    Value: 0
-    Type: 0
-    Order: 0
-  AttackSpeed:
-    Value: 0
-    Type: 0
-    Order: 0
-  AbilityHaste:
-    Value: 0
-    Type: 0
-    Order: 0
-  Picture: {fileID: -168700400, guid: 666398929a2837342b7c538bea9e90be, type: 3}
-  _temporarySpeedBuff:
-    Value: 0.5
-    Type: 1
-    Order: 0
-  _buffTime: 0.5
-  _effectOnSpeedUp: {fileID: -8191433806805381599, guid: c69dae0605ac6ac4dbd52717c793d345, type: 3}

@@ -12,11 +12,11 @@ public class TooltipSystem : MonoBehaviour
     public void Show(string content, string header = "")
     {
         _tooltip.SetText(content, header);
-        _tooltip.transform.DOScale(1, TweeningDuration);
+        _tooltip.transform.DOScale(1, TweeningDuration).SetUpdate(true); 
     }
     public void Hide()
     {
         if (_tooltip)
-            _tooltip.transform.DOScale(0, TweeningDuration);
+            _tooltip.transform.DOScale(0, TweeningDuration).SetUpdate(true);
     }
 }

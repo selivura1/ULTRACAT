@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4889456753175532709, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
@@ -63,6 +64,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -7694691915808452737}
   m_SourcePrefab: {fileID: 100100000, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
 --- !u!1 &5785839044771608847 stripped
 GameObject:
@@ -82,9 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: Green Crystal
-  Description: 'If you are strong enough makes you stronger.
-
-    +Vitality'
+  Description: Healthy = strong.
   Attack:
     Value: 0
     Type: 0

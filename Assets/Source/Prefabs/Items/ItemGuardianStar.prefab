@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4889456753175532709, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
@@ -63,10 +64,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
       propertyPath: m_Name
-      value: ItemGuardianSword
+      value: ItemGuardianStar
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4889456753175532710, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4889456753175532709, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6004223215696977751}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4889456753175532711, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2327189730168908572}
   m_SourcePrefab: {fileID: 100100000, guid: 04c33ace74265eb449566c8618c5be95, type: 3}
 --- !u!4 &5785839044771608845 stripped
 Transform:
@@ -90,16 +100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6bbcae36fd1f63458de6b7173f3204f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Guardian sword
-  Description: 'Protection.
-
-    +Damage'
+  name: Guardian star
+  Description: Protection
   Attack:
-    Value: 0.1
+    Value: 0
     Type: 0
     Order: 0
   Health:
-    Value: 10
+    Value: 0
     Type: 0
     Order: 0
   Speed:
@@ -134,6 +142,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 5785839044771608845}
     m_Modifications:
     - target: {fileID: 2360815198148956484, guid: 4e44f5494af32a34fbe26ec0691252f3, type: 3}
@@ -190,4 +199,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2360815198148956485, guid: 4e44f5494af32a34fbe26ec0691252f3, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e44f5494af32a34fbe26ec0691252f3, type: 3}
+--- !u!4 &6004223215696977751 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2360815198148956488, guid: 4e44f5494af32a34fbe26ec0691252f3, type: 3}
+  m_PrefabInstance: {fileID: 8327162144093539871}
+  m_PrefabAsset: {fileID: 0}
