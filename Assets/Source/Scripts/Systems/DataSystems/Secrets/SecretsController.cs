@@ -19,12 +19,14 @@ namespace Ultracat
         }
         private void Sub()
         {
+            if(_dungeonGenerator)
             _dungeonGenerator.onStageCompleted += CheckOnStageCompleteUnlocks;
             Score.onScoreChanged += CheckScoreSecrets;
         }
         private void Unsub()
         {
-            _dungeonGenerator.onStageCompleted -= CheckOnStageCompleteUnlocks;
+            if (_dungeonGenerator)
+                _dungeonGenerator.onStageCompleted -= CheckOnStageCompleteUnlocks;
             Score.onScoreChanged -= CheckScoreSecrets;
         }
         private void CheckScoreSecrets()

@@ -1,16 +1,17 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Ultracat
 {
-    public class GameStarter : MonoBehaviour
+    public class LevelLoader : MonoBehaviour
     {
-        public static void Restart()
+        public static void RestartCurrentLevel()
         {
             TimeControl.SetPause(false);
             PlayerControl.EnableIngameControls = true;
             Score.ResetScore();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
         public static void CloseGame()
         {

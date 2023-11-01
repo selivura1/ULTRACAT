@@ -221,7 +221,7 @@ MonoBehaviour:
   distance: 15
   baseLifetime: 0
   CurrentSpeed: 500
-  speed: 2
+  speed: 3
   _destroyOnFirstTarget: 1
   _melee: 0
   _enemy: 1

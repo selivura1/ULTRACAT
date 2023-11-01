@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9693a65a443914090f594850cffdd8, type: 3}
   m_Name: F2_Treasure
   m_EditorClassIdentifier: 
-  name: F2 // Treasure rooms
+  name: Treasure
   desc: Keep going
   Rooms:
   - {fileID: 1214383436202963309, guid: f3388df225d1b8d45a6827f4528a88d7, type: 3}
@@ -27,4 +27,3 @@ MonoBehaviour:
   BossRooms:
   - {fileID: 7274031879456490344, guid: 79fb2dc3312ccd047aa05efc29dc40cc, type: 3}
   RoomsToBoss: 5
-  _secretForComplete: {fileID: 11400000, guid: f7216c5502fccb94bacb58a816c23912, type: 2}

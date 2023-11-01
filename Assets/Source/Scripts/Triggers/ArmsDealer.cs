@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Ultracat
 {
     public class ArmsDealer : Trigger
@@ -6,10 +8,10 @@ namespace Ultracat
         public Inventory PlayerInventory { get; private set; }
         //UIManager HUDActivator;
         private GunShopUI GunSelector;
-        private MenuControllerUI UIController;
-        private void Setup()
+        private MenuControllerUI UIController;  
+        private void Setup(PlayerEntity player)
         {
-            PlayerInventory = FindAnyObjectByType<PlayerEntity>().GetComponent<Inventory>();
+            PlayerInventory = player.GetComponent<Inventory>();
             UIController = FindAnyObjectByType<MenuControllerUI>();
             GunSelector = UIController.GunSelectWindow;
             Weapons = FindAnyObjectByType<Database>().UnlockedWeapons.ToArray();
@@ -19,11 +21,14 @@ namespace Ultracat
             PlayerInventory.SetWeapon(Weapons[index]);
         }
         public bool IsAlreadyEquipped(int index) => PlayerInventory.Weapon == Weapons[index];
-        public override void OnTouch()
+        public override void OnTouch(Collision2D collision)
         {
-            Setup();
-            UIController.OpenWindow(GunSelector.gameObject);
-            GunSelector.SetDisplay(this);
+            if (collision.gameObject.TryGetComponent(out PlayerEntity player))
+            {
+                Setup(player);
+                UIController.OpenWindow(GunSelector.gameObject);
+                GunSelector.SetDisplay(this);
+            }
         }
     }
 }

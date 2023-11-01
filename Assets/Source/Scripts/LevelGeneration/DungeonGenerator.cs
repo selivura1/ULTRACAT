@@ -14,7 +14,6 @@ namespace Ultracat
         public Action onRoomPreDestroy;
         public Action onStageCompleted;
         public Action onBossFightStart;
-
         public void CreateDungeon()
         {
             Destroy(_lobby.gameObject);

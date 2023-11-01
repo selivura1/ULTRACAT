@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9693a65a443914090f594850cffdd8, type: 3}
   m_Name: F1_Entrance
   m_EditorClassIdentifier: 
-  name: F1 // Dungeon
+  name: Entrance
   desc: Start here
   Rooms:
   - {fileID: 75926534176873513, guid: c52d44a6e4410fa46b551f0f88768b86, type: 3}
@@ -27,4 +27,3 @@ MonoBehaviour:
   BossRooms:
   - {fileID: 75926534176873513, guid: 28af751c7cd4c8e4fba86ef290aac6e8, type: 3}
   RoomsToBoss: 5
-  _secretForComplete: {fileID: 11400000, guid: 453faa6b4b010394c8c3927c8b193dc9, type: 2}

@@ -7,7 +7,7 @@ namespace Ultracat
         protected override void OnTriggerEnter2D(Collider2D other)
         {
             base.OnTriggerEnter2D(other);
-            if (!other.TryGetComponent(out EntityBase entity))
+            if (!other.TryGetComponent(out IDamageable damageable))
                 timer = 0;
         }
         public override void MovementPerFixedUpdate()
@@ -19,7 +19,7 @@ namespace Ultracat
                 if (Vector3.Distance(caster.transform.position, transform.position) < .4f)
                     Terminate();
             }
-            rigidbody.velocity = transform.right * CurrentSpeed * Time.fixedDeltaTime;
+            rigidbody.velocity = transform.right * CurrentSpeed;
         }
         public override void CountdownTimer()
         {

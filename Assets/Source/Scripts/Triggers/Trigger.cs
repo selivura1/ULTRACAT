@@ -6,7 +6,7 @@ namespace Ultracat
     public class Trigger : MonoBehaviour
     {
         public UnityEvent onTouch;
-        public virtual void OnTouch()
+        public virtual void OnTouch(Collision2D collision)
         {
 
         }
@@ -15,7 +15,7 @@ namespace Ultracat
             if (collision.gameObject.GetComponent<PlayerEntity>())
             {
                 onTouch?.Invoke();
-                OnTouch();
+                OnTouch(collision);
             }
         }
     }

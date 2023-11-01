@@ -11,6 +11,14 @@ public class PoolingSystem<T> where T : MonoBehaviour
     {
         _container = container;
     }
+    public void ClearPools()
+    {
+        foreach (var item in _pools)
+        {
+            item.ClearPool();
+        }
+       _pools.Clear();
+    }
     public T Get(T prefab)
     {
         T output;
@@ -51,7 +59,14 @@ public class ObjectPool<T> where T : MonoBehaviour
         Container = container;
         CreatePool(count);
     }
-
+    public void ClearPool()
+    {
+        for (int i = 0; i < _pool.Count; i++)
+        {
+            GameObject.Destroy(_pool[i].gameObject);
+        }
+        _pool.Clear();
+    }
     private void CreatePool(int count)
     {
         _pool = new List<T>();

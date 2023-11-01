@@ -36,7 +36,7 @@ namespace Ultracat
                     Stamina = 0;
                     lastAttack = BarrageAttack;
                 }
-                else if (Random.Range(0f, 100f) <= BarrageChance)
+                else if (Random.Range(0f, 100f) <= ZoneAttackChance)
                 {
                     lastAttack = ZoneAttack;
                 }

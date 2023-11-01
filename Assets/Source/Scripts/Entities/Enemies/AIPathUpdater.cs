@@ -4,14 +4,13 @@ using UnityEngine;
 
 namespace Ultracat
 {
-    [RequireComponent(typeof(AstarPath))]
     public class AIPathUpdater : MonoBehaviour
     {
         private AstarPath _astarPath;
         private DungeonGenerator _dungeonGenerator;
         void Awake()
         {
-            _astarPath = GetComponent<AstarPath>();
+            _astarPath = FindAnyObjectByType<AstarPath>();
             _dungeonGenerator = GameManager.DungeonGenerator;
             _dungeonGenerator.onRoomSpawned += UpdateTheGrid;
         }

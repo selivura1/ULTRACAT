@@ -11,25 +11,31 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     private void Awake()
     {
         _tooltipSystem = FindAnyObjectByType<TooltipSystem>();
+        enabled = false;
     }
     void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
     {
-        _tooltipSystem.Show(content, header);
+        if (_tooltipSystem != null)
+            _tooltipSystem.Show(content, header);
     }
     private void OnDisable()
     {
-        _tooltipSystem.Hide();
+        if (_tooltipSystem != null)
+            _tooltipSystem.Hide();
     }
     void IPointerExitHandler.OnPointerExit(PointerEventData eventData)
     {
-        _tooltipSystem.Hide();
+        if (_tooltipSystem != null)
+            _tooltipSystem.Hide();
     }
     public void OnMouseEnter()
     {
-        _tooltipSystem.Show(content, header);
+        if (_tooltipSystem != null)
+            _tooltipSystem.Show(content, header);
     }
     public void OnMouseExit()
     {
-        _tooltipSystem.Hide();
+        if (_tooltipSystem != null)
+            _tooltipSystem.Hide();
     }
 }

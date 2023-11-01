@@ -13,8 +13,8 @@ namespace Ultracat
         [SerializeField] public new string name;
         [Header("Stats")]
         [SerializeField] float currentHealth;
-        public int CurrentAbsorbtions { get; private set; }
-        public int CurrentResurections { get; private set; }
+        public int CurrentAbsorbtions { get; protected set; }
+        public int CurrentResurections { get; protected set; }
         public EntityStats EntityStats = new EntityStats();
         public PotionHandler PotionHandler { get; private set; }
         protected bool invincible = false;

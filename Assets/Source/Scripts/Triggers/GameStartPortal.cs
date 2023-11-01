@@ -2,14 +2,12 @@ using UnityEngine;
 
 namespace Ultracat
 {
-    public class GameStartPortal : MonoBehaviour
+    public class GameStartPortal : Trigger
     {
-        private void OnTriggerEnter2D(Collider2D collision)
+        public override void OnTouch(Collision2D collision)
         {
-            if (collision.gameObject.GetComponent<PlayerEntity>())
-            {
-                FindAnyObjectByType<DungeonGenerator>().CreateDungeon();
-            }
+            base.OnTouch(collision);
+            FindAnyObjectByType<DungeonGenerator>().CreateDungeon();
         }
     }
 }

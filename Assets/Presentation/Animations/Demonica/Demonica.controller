@@ -450,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BarrageChance: 25
   ZoneAttackChance: 50
-  RangedAttackRange: 10
+  RangedAttackRange: 15
   TeleportAttack: MeleeAttack
   ZoneAttack: ZoneAttack
   BarrageAttack: Barrage

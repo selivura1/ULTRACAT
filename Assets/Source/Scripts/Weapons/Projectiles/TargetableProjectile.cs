@@ -1,4 +1,3 @@
-using UnityEngine;
 namespace Ultracat
 {
     public class TargetableProjectile : Projectile
@@ -7,7 +6,7 @@ namespace Ultracat
         public override void MovementPerFixedUpdate()
         {
             if (Target)
-                rigidbody.velocity = (Target.transform.position - transform.position).normalized * CurrentSpeed * Time.fixedDeltaTime;
+                rigidbody.velocity = (Target.transform.position - transform.position).normalized * CurrentSpeed;
         }
     }
 }

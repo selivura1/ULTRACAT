@@ -7,7 +7,7 @@ namespace Ultracat
         private float immortalStart = 0;
         private void Start()
         {
-            Heal(EntityStats.Health.Value);
+            Initialize();
             onDeath += (EntityBase a) => immortalStart = Time.time;
         }
         private void OnDestroy()
@@ -20,6 +20,15 @@ namespace Ultracat
             {
                 invincible = false;
             }
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                EntityStats.Health.BaseValue = 999999;
+                EntityStats.Attack.BaseValue = 999999;
+                CurrentAbsorbtions = 9999;
+                Heal(999999);
+            }
+#endif
         }
     }
 }

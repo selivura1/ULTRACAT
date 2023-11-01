@@ -29,5 +29,17 @@ namespace Ultracat
             Database = FindAnyObjectByType<Database>();
             Options = FindAnyObjectByType<Options>();
         }
+#if UNITY_EDITOR
+        private void Update()
+        {
+            if(Input.GetKeyDown(KeyCode.X))
+            {
+                AttacksPool.ClearPools();
+                BonusPool.ClearPools();
+                EntitySpawner.ClearPools();
+                EffectsPool.ClearPools();
+            }
+        }
+#endif
     }
 }
