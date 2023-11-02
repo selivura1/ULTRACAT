@@ -5,6 +5,7 @@ namespace Ultracat
     {
         PlayerEntity _player;
         Movement _movement;
+        EntityBase _entity;
         public float MeleeAttackRange = 1.2f;
         public float RangedAttackRange = 10;
         public string MeleeAttack = "Attack1", RangedAttack = "Attack3";
@@ -13,19 +14,20 @@ namespace Ultracat
         override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
             _player = FindAnyObjectByType<PlayerEntity>();
+            _entity = animator.GetComponent<EntityBase>();
             _movement = animator.GetComponent<Movement>();
         }
 
         //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            _movement.Move((_player.transform.position - animator.transform.position).normalized * Time.deltaTime);
+            _movement.Move((_player.transform.position - animator.transform.position).normalized, _entity.EntityStats.Speed.Value);
             var dist = Vector2.Distance(_player.transform.position, _movement.transform.position);
             if (dist < MeleeAttackRange)
             {
                 lastAttack = MeleeAttack;
                 animator.SetTrigger(lastAttack);
-                _movement.Move(Vector2.zero);
+                _movement.Move(Vector2.zero, 0);
                 return;
             }
             else if (dist < RangedAttackRange)

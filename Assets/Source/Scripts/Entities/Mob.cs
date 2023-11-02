@@ -22,7 +22,6 @@ namespace Ultracat
                 }
             }
             DropExp();
-            _statbar.RemoveDisplay();
             base.Terminate(killer);
         }
 
@@ -50,26 +49,20 @@ namespace Ultracat
     [System.Serializable]
     public class EntityStatbar
     {
-        protected StatBar _display;
         [SerializeField] bool _versus = false;
         [SerializeField] bool _spawnBossBar = false;
         [SerializeField] bool _spawnBar = true;
 
         public void Initialize(EntityBase entity)
         {
-            if (_spawnBar && !_display)
+            if (_spawnBar)
             {
-                _display = GameManager.EntityDisplaySpawner.SpawnMobHPBar(entity);
+                GameManager.EntityDisplaySpawner.SpawnMobHPBar(entity);
             }
             if (_spawnBossBar)
                 GameManager.EntityDisplaySpawner.SpawnBossbar(entity);
             if (_versus)
                 GameObject.FindAnyObjectByType<BossfightUI>().ShowVersus(entity.Splash);
-        }
-        public void RemoveDisplay()
-        {
-            if (_display)
-                _display.Terminate();
         }
     }
 }

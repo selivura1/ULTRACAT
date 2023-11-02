@@ -2,14 +2,15 @@ using UnityEngine;
 
 namespace Ultracat
 {
-    public class PlayerTeleporter : MonoBehaviour
+    [RequireComponent (typeof(DungeonGenerator))]
+    public class PlayerDungeonTeleporter : MonoBehaviour
     {
         Movement _playerMovement;
         private DungeonGenerator _dungeonGenerator;
         void Awake()
         {
             _playerMovement = FindAnyObjectByType<PlayerEntity>().GetComponent<Movement>();
-            _dungeonGenerator = GameManager.DungeonGenerator;
+            _dungeonGenerator = GetComponent<DungeonGenerator>();
             _dungeonGenerator.onRoomSpawned += TeleportToTheRoomStart;
         }
         private void OnDestroy()

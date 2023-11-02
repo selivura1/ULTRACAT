@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 55295150495143124}
   - component: {fileID: 2477480922688567568}
   - component: {fileID: 766024124}
+  - component: {fileID: -8638113724809948920}
   m_Layer: 11
   m_Name: MobBossDemonica
   m_TagString: Untagged
@@ -339,6 +340,19 @@ MonoBehaviour:
   _zoneSpawnSound: {fileID: 8300000, guid: 2233b1890c9e44d4dbf328064ee1b426, type: 3}
   _rangedAttackSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
   _meleeAttackSound: {fileID: 8300000, guid: 98205ebceb72bfe45a4429fa31b4ec02, type: 3}
+--- !u!114 &-8638113724809948920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962914425388498273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5eff55d5f84d64f8c3826a5f21d40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drop: {fileID: 4115979612161846632, guid: 377bd2385d4960d46a5a527197c315d8, type: 3}
 --- !u!1 &4962914427119130022
 GameObject:
   m_ObjectHideFlags: 0

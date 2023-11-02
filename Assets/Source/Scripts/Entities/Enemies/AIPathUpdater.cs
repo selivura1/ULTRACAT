@@ -11,7 +11,7 @@ namespace Ultracat
         void Awake()
         {
             _astarPath = FindAnyObjectByType<AstarPath>();
-            _dungeonGenerator = GameManager.DungeonGenerator;
+            _dungeonGenerator = FindAnyObjectByType<DungeonGenerator>();
             _dungeonGenerator.onRoomSpawned += UpdateTheGrid;
         }
         private void OnDestroy()

@@ -14,6 +14,8 @@ namespace Ultracat
         public static PlayerControl Singleton;
         public static System.Action submitInput;
         public static System.Action cancelInput;
+        private InputAction _fireAction;
+        private InputAction _altFire;
         private void Awake()
         {
             if (Singleton)
@@ -26,6 +28,8 @@ namespace Ultracat
             _combat = _entity.GetComponent<Combat>();
             _inventory = _entity.GetComponent<Inventory>();
             _input = GetComponent<PlayerInput>();
+            _fireAction = _input.actions.FindAction("Fire");
+            _altFire = _input.actions.FindAction("AltFire");
         }
         public static Vector2 GetMouseDirection(Vector3 from)
         {
@@ -56,18 +60,18 @@ namespace Ultracat
         private void Update()
         {
             if (!EnableIngameControls) return;
-            if (_input.actions.FindAction("Fire").IsPressed())
+            if (_fireAction.IsPressed())
             {
                 _combat.StartAttack(GetMouseDirection(_combat.transform.position), _inventory.Weapon);
             }
-            if (_input.actions.FindAction("AltFire").WasPressedThisFrame())
+            if (_altFire.WasPressedThisFrame())
                 _combat.StartCharging(GetMouseDirection(_combat.transform.position), _inventory.Weapon);
-            if (_input.actions.FindAction("AltFire").WasReleasedThisFrame())
+            if (_altFire.WasReleasedThisFrame())
                 _combat.StopCharging(GetMouseDirection(_combat.transform.position), _inventory.Weapon);
         }
         private void FixedUpdate()
         {
-            _movement.Move(dir);
+            _movement.Move(dir, _entity.EntityStats.Speed.Value);
         }
     }
 }

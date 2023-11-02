@@ -6,21 +6,19 @@ namespace Ultracat
     public class Movement : MonoBehaviour
     {
         Rigidbody2D _rb;
-        EntityBase entity;
         Animator _anim;
         public bool CanMove { get; private set; } = true;
         private void Awake()
         {
-            entity = GetComponent<EntityBase>();
             _anim = GetComponent<Animator>();
             _rb = GetComponent<Rigidbody2D>();
         }
-        public void Move(Vector2 dir)
+        public void Move(Vector2 dir, float speed)
         {
             if (dir.magnitude > 0)
                 transform.localScale = Combat.SetScaleByDirection(dir);
             if (CanMove)
-                _rb.velocity = dir.normalized * entity.EntityStats.Speed.Value;
+                _rb.velocity = dir.normalized * speed;
             if (_anim)
                 _anim.SetFloat("Speed", dir.magnitude);
         }
@@ -43,7 +41,6 @@ namespace Ultracat
         {
             transform.position = pos;
         }
-
         internal void StunForTime(object chargeAttackTime)
         {
             throw new NotImplementedException();

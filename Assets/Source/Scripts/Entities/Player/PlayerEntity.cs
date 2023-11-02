@@ -4,22 +4,25 @@ namespace Ultracat
     public class PlayerEntity : EntityBase
     {
         [SerializeField] private float immortalTimer = 1f;
-        private float immortalStart = 0;
+        private float _immortalStart = 0;
         private void Start()
         {
             Initialize();
-            onDeath += (EntityBase a) => immortalStart = Time.time;
+            onDeath += (EntityBase a) => _immortalStart = Time.fixedTime;
         }
         private void OnDestroy()
         {
-            onDeath -= (EntityBase a) => immortalStart = Time.time;
+            onDeath -= (EntityBase a) => _immortalStart = Time.fixedTime;
         }
-        private void Update()
+        private void FixedUpdate()
         {
-            if (Time.time >= immortalStart + immortalTimer)
+            if (Time.fixedTime >= _immortalStart + immortalTimer)
             {
                 invincible = false;
             }
+        }
+        private void Update()
+        {
 #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.G))
             {

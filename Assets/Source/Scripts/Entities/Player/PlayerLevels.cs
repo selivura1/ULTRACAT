@@ -10,8 +10,8 @@ namespace Ultracat
         public int Tokens = 0;
         [SerializeField] int scaling = 5;
         [SerializeField] int startExpToNextLevel = 5;
+        [SerializeField] private int _generatedItemsAmount = 3;
         public List<Item> RandomItems = new List<Item>();
-        private List<Item> UsedItems = new List<Item>();
         private PlayerEntity _player;
         public System.Action onLevelUp;
         public System.Action onExperienceChange;
@@ -58,17 +58,7 @@ namespace Ultracat
         public void GenerateNewRandomItems()
         {
             RandomItems.Clear();
-            for (int i = 0; i < 3; i++)
-            {
-                var generated = GameManager.Database.UnlockedItems[Random.Range(0, GameManager.Database.UnlockedItems.Count)];
-                while (UsedItems.Contains(generated))
-                {
-                    generated = GameManager.Database.UnlockedItems[Random.Range(0, GameManager.Database.UnlockedItems.Count)];
-                }
-                RandomItems.Add(generated);
-                UsedItems.Add(generated);
-            }
-            UsedItems.Clear();
+            RandomItems.AddRange(GameManager.GetRandomObjectsFromList(GameManager.Database.UnlockedItems, _generatedItemsAmount, false));
             onItemsChanged?.Invoke();
         }
         public void UseToken(int index)

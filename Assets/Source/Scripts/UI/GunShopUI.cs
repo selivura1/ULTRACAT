@@ -10,7 +10,7 @@ namespace Ultracat
         [SerializeField] TMP_Text _weaponName;
         [SerializeField] TMP_Text _weaponDesc;
         [SerializeField] Image _weaponImage;
-        ArmsDealer currentDealer;
+        WeaponBox currentDealer;
         private int index;
         private void Start()
         {
@@ -18,7 +18,7 @@ namespace Ultracat
             _leftArrow.onClick.AddListener(Left);
             _equipButton.onClick.AddListener(Equip);
         }
-        public void SetDisplay(ArmsDealer dealer)
+        public void SetDisplay(WeaponBox dealer)
         {
             currentDealer = dealer;
             Refresh();

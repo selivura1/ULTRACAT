@@ -29,11 +29,11 @@ namespace Ultracat
         {
             if (_moveToPlayer)
             {
-                _movement.Move((_player.transform.position - transform.position).normalized);
+                _movement.Move((_player.transform.position - transform.position).normalized, _entity.EntityStats.Speed.Value);
             }
             else
             {
-                _movement.Move(Vector2.zero);
+                _movement.Move(Vector2.zero, 0);
             }
         }
         public void AttackMelee()

@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 6132999925755695605}
   - component: {fileID: 8627066820266982449}
   - component: {fileID: 2858476504152670368}
+  - component: {fileID: 3628953552619013963}
   m_Layer: 11
   m_Name: MobBossRuinedCat
   m_TagString: Untagged
@@ -457,6 +458,19 @@ MonoBehaviour:
   - Attack4
   _shootSound: {fileID: 8300000, guid: a7cd94bd95ba67940889b17d70b1022e, type: 3}
   _ghostSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
+--- !u!114 &3628953552619013963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227064001579169856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c5eff55d5f84d64f8c3826a5f21d40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _drop: {fileID: 4115979612161846632, guid: 377bd2385d4960d46a5a527197c315d8, type: 3}
 --- !u!1 &2651839597461786049
 GameObject:
   m_ObjectHideFlags: 0

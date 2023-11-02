@@ -5,19 +5,13 @@ using UnityEngine;
 public class FadeUI : MonoBehaviour
 {
     Animator animator;
-    [SerializeField] DungeonGenerator _dungeonGenerator;
-    private void Start()
+    [SerializeField] private string _fadeKeyAnimation = "FadeIn";
+    private void Awake()
     {
-        _dungeonGenerator = FindAnyObjectByType<DungeonGenerator>();
         animator = GetComponent<Animator>();
-        _dungeonGenerator.onRoomSpawned += Fade;
-    }
-    private void OnDestroy()
-    {
-        _dungeonGenerator.onRoomSpawned -= Fade;
     }
     public void Fade()
     {
-        animator.Play("FadeIn");
+        animator.Play(_fadeKeyAnimation);
     }
 }

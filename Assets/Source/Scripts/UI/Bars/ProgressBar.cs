@@ -24,12 +24,8 @@ public class ProgressBar : MonoBehaviour
     protected virtual void FixedUpdate()
     {
         GetCurrentFill();
-    }
-    private void Update()
-    {
         SetColors();
     }
-
     private void SetColors()
     {
         fill.color = color;

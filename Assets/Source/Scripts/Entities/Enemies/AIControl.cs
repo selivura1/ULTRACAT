@@ -148,7 +148,7 @@ namespace Ultracat
 
         public void Move()
         {
-            _movement.Move(dir);
+            _movement.Move(dir, _entity.EntityStats.Speed.Value);
         }
         protected void StartAttack()
         {

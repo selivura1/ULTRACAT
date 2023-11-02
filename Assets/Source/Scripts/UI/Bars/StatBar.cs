@@ -16,20 +16,32 @@ namespace Ultracat
     public class StatBar : MonoBehaviour
     {
         AIControl _ownerAI;
-        EntityBase owner;
+        EntityBase _owner;
         [SerializeField] ProgressBar _bar;
         [SerializeField] Transform _grid;
         [SerializeField] Sprite[] _icons;
         [SerializeField] Vector2 _offset;
-        public void SetOwner(EntityBase newOwner)
+        Camera _camera;
+        private void Awake()
         {
-            if (_ownerAI != null)
-                UnsubFromAIEvents();
-            owner = newOwner;
-            var newAi = owner.GetComponent<AIControl>();
+            _camera = Camera.main;
+        }
+        public void Initialize(EntityBase newOwner)
+        {
+            _owner = newOwner;
+            var newAi = _owner.GetComponent<AIControl>();
             if (newAi != null)
                 _ownerAI = newAi;
+            SubToEntityEvents();
             SubToAIEvents();
+        }
+        private void SubToEntityEvents()
+        {
+            _owner.onDeath += (EntityBase a) => { Terminate(); };
+        }
+        private void UnsubFromEntityEvents()
+        {
+            _owner.onDeath -= (EntityBase a) => { Terminate(); };
         }
         public void SubToAIEvents()
         {
@@ -41,22 +53,22 @@ namespace Ultracat
             if (_ownerAI)
                 _ownerAI.onAttackPrepare -= AIWarningEffectSpawn;
         }
-
-        public void Terminate()
+        private void Terminate()
         {
-            Destroy(gameObject);
+            UnsubFromEntityEvents();
+            UnsubFromAIEvents();
+            gameObject.SetActive(false);
         }
 
         private void AIWarningEffectSpawn(float prepareTime)
         {
             AddEffect(EffectTypes.Warning, prepareTime);
         }
-        private void Update()
+        private void FixedUpdate()
         {
-            if (!owner) return;
-            _bar.Max = owner.EntityStats.Health.Value;
-            _bar.CurrentValue = owner.GetHealth();
-            transform.position = Camera.main.WorldToScreenPoint(owner.transform.position + (Vector3)_offset);
+            _bar.Max = _owner.EntityStats.Health.Value;
+            _bar.CurrentValue = _owner.GetHealth();
+            transform.position = _camera.WorldToScreenPoint(_owner.transform.position + (Vector3)_offset);
         }
         public void AddEffect(EffectTypes type, float time)
         {
