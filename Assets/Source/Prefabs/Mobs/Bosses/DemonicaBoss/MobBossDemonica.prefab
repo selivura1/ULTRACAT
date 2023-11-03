@@ -66,9 +66,9 @@ MonoBehaviour:
   currentHealth: 0
   EntityStats:
     Attack:
-      BaseValue: 25
+      BaseValue: 10
     Health:
-      BaseValue: 400
+      BaseValue: 250
     Speed:
       BaseValue: 5
     BonusChance:
@@ -81,7 +81,7 @@ MonoBehaviour:
       BaseValue: 0
   Enemy: 1
   _playOnDamage: 0
-  _damagedAnimation: oof
+  _damagedAnimation: DemonicaHit
   SoulDrop: 3
   _statbar:
     _versus: 1
@@ -330,16 +330,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6284329fcb8624a9104d2c87097a25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _zoneAttackRange: 3
-  _zoneAttackDamageMultiplier: 2
-  _zoneAttackAmount: 3
-  _zoneAttack: {fileID: 1635195385614678764, guid: 2456ed1f0dca173499de2a6328d0350f, type: 3}
+  _explosionAttackProjectile: {fileID: 1635195385614678764, guid: 2456ed1f0dca173499de2a6328d0350f, type: 3}
+  _explosionSpawnSound: {fileID: 8300000, guid: 2233b1890c9e44d4dbf328064ee1b426, type: 3}
+  _explosionAttackRange: 3
+  _explosionAttackDamageMultiplier: 1
+  _bigExplosionAttack: BigExplosionAttack
+  _bigExplosionAttackAmount: 6
+  _roundMeleeAttack: RoundMeleeAttack
   _meleeAttackProjectile: {fileID: 5355365781319234486, guid: f7d2114d2d2c99c4db20c83d2b5ed260, type: 3}
-  _rangeAttackProjectile: {fileID: 1060391164198894900, guid: 1c689e496136ecb45b089f88dec1199e, type: 3}
-  _attackPrepareSound: {fileID: 8300000, guid: 8f0867da91313b8489a0bafa3151820f, type: 3}
-  _zoneSpawnSound: {fileID: 8300000, guid: 2233b1890c9e44d4dbf328064ee1b426, type: 3}
-  _rangedAttackSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
   _meleeAttackSound: {fileID: 8300000, guid: 98205ebceb72bfe45a4429fa31b4ec02, type: 3}
+  _attackPrepareSound: {fileID: 8300000, guid: 8f0867da91313b8489a0bafa3151820f, type: 3}
+  _legMeleeAttack: LegMeleeAttack
+  _punchMeleeAttack: PunchMeleeAttack
+  _barrageAttack: Barrage
+  _fireballAttack: FireballAttack
+  _fireballDamageMultiplier: 1
+  _rangeAttackProjectile: {fileID: 1060391164198894900, guid: 1c689e496136ecb45b089f88dec1199e, type: 3}
+  _rangedAttackSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
 --- !u!114 &-8638113724809948920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,7 +433,7 @@ SpriteRenderer:
   m_SortingLayerID: 1883950881
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: -1159779066, guid: 811ebb0e9ce85e1418298940faadc5b5, type: 3}
+  m_Sprite: {fileID: -260374270, guid: 811ebb0e9ce85e1418298940faadc5b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

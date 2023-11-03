@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -117,178 +119,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPR_DemonBoss_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62bd3fa471c29234c9ee75f49931deed
-      internalID: 799442044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 75d7bf6b8b7479d4f9f1d701e04167a2
-      internalID: -1159779066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1e9bd2e4cea64348b324809230182be
-      internalID: -888394424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31fc13e7998de2e4b84c941c96afa89e
-      internalID: -594074096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f28cf2abad4f5d54e97e61f41188b974
-      internalID: 1807449134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29261bdc4c88a3149aadb75b71d1d569
-      internalID: 244076260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e74e6551daf3944f9d7d748a9128ebb
-      internalID: -1139047571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SPR_DemonBoss_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3a28bae78cc983d40a6572cf688fd446
-      internalID: -515073151
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SPR_DemonicaBoss_0
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 0
         width: 32
         height: 32
@@ -309,7 +143,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_1
       rect:
         serializedVersion: 2
-        x: 288
+        x: 32
         y: 0
         width: 32
         height: 32
@@ -330,7 +164,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 0
         width: 32
         height: 32
@@ -351,7 +185,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_3
       rect:
         serializedVersion: 2
-        x: 352
+        x: 96
         y: 0
         width: 32
         height: 32
@@ -372,7 +206,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 0
         width: 32
         height: 32
@@ -393,7 +227,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_5
       rect:
         serializedVersion: 2
-        x: 416
+        x: 160
         y: 0
         width: 32
         height: 32
@@ -414,7 +248,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_6
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 0
         width: 32
         height: 32
@@ -435,7 +269,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_7
       rect:
         serializedVersion: 2
-        x: 480
+        x: 224
         y: 0
         width: 32
         height: 32
@@ -456,7 +290,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_8
       rect:
         serializedVersion: 2
-        x: 512
+        x: 256
         y: 0
         width: 32
         height: 32
@@ -477,7 +311,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_9
       rect:
         serializedVersion: 2
-        x: 544
+        x: 288
         y: 0
         width: 32
         height: 32
@@ -498,7 +332,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_10
       rect:
         serializedVersion: 2
-        x: 576
+        x: 320
         y: 0
         width: 32
         height: 32
@@ -519,7 +353,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_11
       rect:
         serializedVersion: 2
-        x: 608
+        x: 352
         y: 0
         width: 32
         height: 32
@@ -540,7 +374,7 @@ TextureImporter:
       name: SPR_DemonicaBoss_12
       rect:
         serializedVersion: 2
-        x: 640
+        x: 384
         y: 0
         width: 32
         height: 32
@@ -557,6 +391,258 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e765591ffa3db48b4fddc0adaaeffc
+      internalID: 1847984364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_14
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a26c6677262354280be28706b336ee
+      internalID: 1082448577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_15
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd934c03919386e4d8cdf0225768bb8a
+      internalID: -1426750404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eb9433e92a0034cba50ea941d068a0
+      internalID: -1008383879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_17
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1539209b4ae6a9e4aafb2ee7f4905865
+      internalID: -1243423924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224e19f719928894383645e2c64eeaa2
+      internalID: -52968368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_19
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c976d8f833db4f4c8b7dc1f4fc4728e
+      internalID: 302603902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e9ae5a1f4479e4f9025c3e9e642a9f
+      internalID: 612731032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_21
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb228285359e4643ae54c3941edbc0b
+      internalID: 942101191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_22
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3f9e4565e380643b47f707672a55d0
+      internalID: 782169699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_23
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deb43215b37d1040a58af55262913cb
+      internalID: -1170634352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPR_DemonicaBoss_24
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e27c72df7a4214798ddce2d93a3654
+      internalID: -899853163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -568,20 +654,24 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPR_DemonBoss_0: 799442044
-      SPR_DemonBoss_1: -1159779066
-      SPR_DemonBoss_2: -888394424
-      SPR_DemonBoss_3: -594074096
-      SPR_DemonBoss_4: 1807449134
-      SPR_DemonBoss_5: 244076260
-      SPR_DemonBoss_6: -1139047571
-      SPR_DemonBoss_7: -515073151
       SPR_DemonicaBoss_0: -260374270
       SPR_DemonicaBoss_1: 1144494170
       SPR_DemonicaBoss_10: 1785867340
       SPR_DemonicaBoss_11: -1666152405
       SPR_DemonicaBoss_12: 653623959
+      SPR_DemonicaBoss_13: 1847984364
+      SPR_DemonicaBoss_14: 1082448577
+      SPR_DemonicaBoss_15: -1426750404
+      SPR_DemonicaBoss_16: -1008383879
+      SPR_DemonicaBoss_17: -1243423924
+      SPR_DemonicaBoss_18: -52968368
+      SPR_DemonicaBoss_19: 302603902
       SPR_DemonicaBoss_2: 1128646950
+      SPR_DemonicaBoss_20: 612731032
+      SPR_DemonicaBoss_21: 942101191
+      SPR_DemonicaBoss_22: 782169699
+      SPR_DemonicaBoss_23: -1170634352
+      SPR_DemonicaBoss_24: -899853163
       SPR_DemonicaBoss_3: -1538561773
       SPR_DemonicaBoss_4: -1269159279
       SPR_DemonicaBoss_5: 914124859
@@ -589,9 +679,8 @@ TextureImporter:
       SPR_DemonicaBoss_7: 1230051746
       SPR_DemonicaBoss_8: 1041188211
       SPR_DemonicaBoss_9: -11924881
-  spritePackingTag: 
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

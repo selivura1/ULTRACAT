@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8427230228473258519}
   - component: {fileID: 8427230228473258517}
   - component: {fileID: 8427230228473258516}
-  - component: {fileID: 8427230228473258518}
   - component: {fileID: 8427230228473258509}
   - component: {fileID: 8427230228473258505}
   - component: {fileID: 8427230228473258506}
@@ -23,6 +22,7 @@ GameObject:
   - component: {fileID: 2880439712976397791}
   - component: {fileID: 7899312616540961209}
   - component: {fileID: 8640466679332319250}
+  - component: {fileID: 3707589857952606558}
   m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -113,18 +113,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.026173025, y: 0.013476938}
   m_Size: {x: 0.73317736, y: 0.73317736}
   m_Direction: 0
---- !u!114 &8427230228473258518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427230228473258515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d3587bda9fe6f24ba9be36d73c52b7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8427230228473258509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +241,7 @@ MonoBehaviour:
   Tokens: 0
   scaling: 8
   startExpToNextLevel: 8
+  _generatedItemsAmount: 3
   RandomItems: []
 --- !u!114 &4888875701138727103
 MonoBehaviour:
@@ -405,6 +394,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _killScore: 1
   _levelUpScore: 10
+--- !u!114 &3707589857952606558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427230228473258515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae1c39010cf749144822131129ff947f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8427230228697905509
 GameObject:
   m_ObjectHideFlags: 0
