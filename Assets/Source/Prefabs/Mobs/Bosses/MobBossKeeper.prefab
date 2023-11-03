@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5501555981851068548, guid: e3f6ad33bc457dd4b93306bde0aee775, type: 3}
       propertyPath: EntityStats.Health.BaseValue
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5501555981851068550, guid: e3f6ad33bc457dd4b93306bde0aee775, type: 3}
       propertyPath: m_Name

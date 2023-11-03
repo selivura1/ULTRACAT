@@ -30,18 +30,17 @@ namespace Ultracat
         {
             _owner = newOwner;
             var newAi = _owner.GetComponent<AIControl>();
-            if (newAi != null)
-                _ownerAI = newAi;
+            _ownerAI = newAi;
             SubToEntityEvents();
             SubToAIEvents();
         }
         private void SubToEntityEvents()
         {
-            _owner.onDeath += (EntityBase a) => { Terminate(); };
+            _owner.onDeath += Terminate;
         }
         private void UnsubFromEntityEvents()
         {
-            _owner.onDeath -= (EntityBase a) => { Terminate(); };
+            _owner.onDeath -= Terminate;
         }
         public void SubToAIEvents()
         {
@@ -53,7 +52,7 @@ namespace Ultracat
             if (_ownerAI)
                 _ownerAI.onAttackPrepare -= AIWarningEffectSpawn;
         }
-        private void Terminate()
+        private void Terminate(EntityBase ent)
         {
             UnsubFromEntityEvents();
             UnsubFromAIEvents();

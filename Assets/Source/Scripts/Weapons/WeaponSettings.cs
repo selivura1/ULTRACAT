@@ -16,6 +16,7 @@ namespace Ultracat
         public Vector2 attackSpawnRange;
         public float BaseReloadSpeed = 100;
         [Header("Charge attack")]
+        public bool ChargeAttackEnabled = false;
         public float MaxChargeTime = 1;
         public float ChargeStartTime { get; protected set; } = 0;
         public float ChargeTime { get; protected set; } = 0;

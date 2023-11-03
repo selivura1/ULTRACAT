@@ -149,9 +149,9 @@ MonoBehaviour:
   currentHealth: 0
   EntityStats:
     Attack:
-      BaseValue: 12
+      BaseValue: 8
     Health:
-      BaseValue: 200
+      BaseValue: 100
     Speed:
       BaseValue: 4
     BonusChance:

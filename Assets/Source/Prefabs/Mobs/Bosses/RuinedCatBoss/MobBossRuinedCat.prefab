@@ -182,7 +182,7 @@ MonoBehaviour:
   currentHealth: 0
   EntityStats:
     Attack:
-      BaseValue: 35
+      BaseValue: 10
     Health:
       BaseValue: 500
     Speed:
@@ -458,6 +458,8 @@ MonoBehaviour:
   - Attack4
   _shootSound: {fileID: 8300000, guid: a7cd94bd95ba67940889b17d70b1022e, type: 3}
   _ghostSound: {fileID: 8300000, guid: 2fb5fdfee640d8946b1da5dd4328a7a5, type: 3}
+  _ghostDamageMultiplier: 1.25
+  _bulletDamageMultiplier: 0.6
 --- !u!114 &3628953552619013963
 MonoBehaviour:
   m_ObjectHideFlags: 0

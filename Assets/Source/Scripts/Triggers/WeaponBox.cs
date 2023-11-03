@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ultracat
@@ -30,10 +31,11 @@ namespace Ultracat
         }
         private void RandomizeWeapons()
         {
-            var weapons = FindAnyObjectByType<Database>().UnlockedWeapons;
+            var weapons = new List<WeaponBase>();
+            weapons.AddRange(FindAnyObjectByType<Database>().UnlockedWeapons);
             for (int i = 0; i < weapons.Count; i++)
             {
-                if (weapons[i].name == PlayerInventory.Weapon.name)
+                if (weapons[i].WeaponSettings.Name == PlayerInventory.Weapon.WeaponSettings.Name)
                     weapons.RemoveAt(i);
             }
             Weapons = GameManager.GetRandomObjectsFromList(weapons, _amountOfWeapons, false).ToArray();

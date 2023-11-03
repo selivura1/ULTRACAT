@@ -133,7 +133,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 64
-  areaDamageForNextTarget: 50
+  areaDamageForNextTarget: 100
   _effect: {fileID: 0}
   RandomFlipX: 0
   RandomFlipY: 1

@@ -21,6 +21,7 @@ MonoBehaviour:
   attackTime: 0.15
   attackSpawnRange: {x: 0, y: 0}
   BaseReloadSpeed: 275
+  ChargeAttackEnabled: 1
   MaxChargeTime: 0.3
   chargeMultiplier: 0.45
   chargeAttackTime: 0.4

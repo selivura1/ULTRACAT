@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c9d3f86793f334db5bd7a7d112ef4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 2
+  distance: 4
   baseLifetime: 0
   CurrentSpeed: 500
-  speed: 7
+  speed: 10
   _destroyOnFirstTarget: 0
   _melee: 0
   _enemy: 1

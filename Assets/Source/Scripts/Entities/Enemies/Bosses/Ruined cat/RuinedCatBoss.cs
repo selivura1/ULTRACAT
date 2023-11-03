@@ -10,6 +10,8 @@ namespace Ultracat
         [SerializeField] string[] _attackList;
         [SerializeField] AudioClip _shootSound;
         [SerializeField] AudioClip _ghostSound;
+        [SerializeField] float _ghostDamageMultiplier = 1.25f;
+        [SerializeField] float _bulletDamageMultiplier = .2f;
         GlobalSoundSpawner _soundSpawner;
         Animator _anim;
         PlayerEntity _player;
@@ -32,7 +34,7 @@ namespace Ultracat
             _soundSpawner.PlaySound(_ghostSound, SoundType.Enemy, 1, 1);
             TargetableProjectile projectileSpawned = (TargetableProjectile)GameManager.AttacksPool.Get(_attackProjectileHoming);
             projectileSpawned.transform.position = transform.position;
-            projectileSpawned.Initialize(_user, Vector2.zero, _user.EntityStats.Attack.Value * 1f);
+            projectileSpawned.Initialize(_user, Vector2.zero, _user.EntityStats.Attack.Value * _ghostDamageMultiplier);
             projectileSpawned.Target = _player;
         }
 
@@ -41,7 +43,7 @@ namespace Ultracat
             _soundSpawner.PlaySound(_shootSound, SoundType.Enemy);
             Projectile projectileSpawned = GameManager.AttacksPool.Get(_attackProjectileSimple);
             projectileSpawned.transform.position = transform.position;
-            projectileSpawned.Initialize(_user, _player.transform.position - transform.position, _user.EntityStats.Attack.Value * .75f);
+            projectileSpawned.Initialize(_user, _player.transform.position - transform.position, _user.EntityStats.Attack.Value * _bulletDamageMultiplier);
         }
         public void SpawnAttackTrack()
         {
@@ -49,7 +51,7 @@ namespace Ultracat
             spawned.transform.Rotate(new Vector3(0, 0, Random.Range(0, 360)));
             var projectileSpawned = GameManager.AttacksPool.Get(_attackProjectileTrack);
             projectileSpawned.transform.position = spawned.StartingPoints[Random.Range(0, spawned.StartingPoints.Length)].position;
-            projectileSpawned.Initialize(_user, spawned.Center.position - projectileSpawned.transform.position, _user.EntityStats.Attack.Value * 0.5f);
+            projectileSpawned.Initialize(_user, spawned.Center.position - projectileSpawned.transform.position, _user.EntityStats.Attack.Value * _bulletDamageMultiplier);
             Destroy(spawned.gameObject, 1);
         }
     }

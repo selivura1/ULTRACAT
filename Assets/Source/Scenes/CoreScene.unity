@@ -827,7 +827,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1040,6 +1040,14 @@ PrefabInstance:
     - target: {fileID: 8427230228473258519, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461311019365608516, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
+      propertyPath: scaling
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461311019365608516, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
+      propertyPath: startExpToNextLevel
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3707589857952606558, guid: 763178a761e9e284e8f2e32f3f2d1bb8, type: 3}
@@ -1686,8 +1694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _secrets:
   - {fileID: 11400000, guid: 453faa6b4b010394c8c3927c8b193dc9, type: 2}
-  - {fileID: 11400000, guid: f7216c5502fccb94bacb58a816c23912, type: 2}
   - {fileID: 11400000, guid: da137adadfb630441a804dd33d74e2dc, type: 2}
+  - {fileID: 11400000, guid: f7216c5502fccb94bacb58a816c23912, type: 2}
   - {fileID: 11400000, guid: 7b321bddd667cf64fa04417cfa4451aa, type: 2}
   - {fileID: 11400000, guid: e1fc913368057604b858a59bc7a9f856, type: 2}
   _items:

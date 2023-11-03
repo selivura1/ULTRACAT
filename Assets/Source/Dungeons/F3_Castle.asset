@@ -16,6 +16,14 @@ MonoBehaviour:
   desc: It's over...
   Rooms:
   - {fileID: 3011697781462459865, guid: cd63fea23fe45764ea514bb51c19f5f8, type: 3}
+  - {fileID: 3011697781462459865, guid: ebb2ab6d2f725af4e98a3850309ee6be, type: 3}
+  - {fileID: 3011697781462459865, guid: 4df474b526c90904b936121e49ffe6a8, type: 3}
+  - {fileID: 3011697781462459865, guid: c2798f9f220d54643a0488794a228b69, type: 3}
+  - {fileID: 3011697781462459865, guid: e945b4a3013c09845b36b7eca8746f93, type: 3}
+  - {fileID: 3011697781462459865, guid: 41f25ce1b7bc21c42bbb149346c4556a, type: 3}
+  - {fileID: 3011697781462459865, guid: d4583bb0a27d5794cb76fc8a54a8a738, type: 3}
+  - {fileID: 3011697781462459865, guid: 238a498b47e3a18469a615cc6d6f9405, type: 3}
+  - {fileID: 3011697781462459865, guid: 91ad60635e5db87409ac69b5b5b2fc45, type: 3}
   BossRooms:
   - {fileID: 3011697781462459865, guid: 3ac12ce62e7834d43947ab79f44f732f, type: 3}
   RoomsToBoss: 1

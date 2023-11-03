@@ -83,7 +83,7 @@ namespace Ultracat
         protected abstract void FinishAttack(bool startCooldown = true);
         public void StartCharging(Vector2 direction)
         {
-            if (!CheckIfCanAttack()) return;
+            if (!CheckIfCanAttack() || !WeaponSettings.ChargeAttackEnabled) return;
             OnStartCharging(direction);
             Combat.SetScaleByDirection(direction);
             entityAnimator.SetBool("IsChanneling", true);
