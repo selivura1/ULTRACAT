@@ -597,9 +597,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreSecrets:
-  - Score: 5000
+  - Score: 100
     SecretID: 3
-  - Score: 10000
+  - Score: 150
     SecretID: 4
 --- !u!1 &291106083
 GameObject:
@@ -819,15 +819,15 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.0018773468
+    y: 0.001112347
+    width: 0.9962453
+    height: 0.9966629
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1541,7 +1541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590015804034630122, guid: 73cb9c46616db8f4c98e992e6448c6ad, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 13.505
+      value: 13.345
       objectReference: {fileID: 0}
     - target: {fileID: 3590015804034630122, guid: 73cb9c46616db8f4c98e992e6448c6ad, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1728,8 +1728,10 @@ MonoBehaviour:
   - {fileID: 2817851925227172702, guid: 6290b54b056a73b4baa9b22b8fe83590, type: 3}
   - {fileID: 5199879139131338356, guid: 5ce609348ba2f0b42b559f0eb3478374, type: 3}
   - {fileID: 6077948248582158548, guid: 7e8fd11d434620141bdfdcf0103ab954, type: 3}
+  - {fileID: 655101959975305625, guid: 016351afccb4abe43b6998d7cb1becd6, type: 3}
   _usableWeapons:
   - {fileID: 5199879139131338356, guid: 5ce609348ba2f0b42b559f0eb3478374, type: 3}
+  - {fileID: 655101959975305625, guid: d785bc41e6fcf834ca918d4a302ee306, type: 3}
   Collectibles:
   - {fileID: 4403590385786661474, guid: cffa224e20e07654295bb440de25ccde, type: 3}
   - {fileID: 3579766001363599379, guid: 6abf6392d32e35e4e91dcb5aadec04b1, type: 3}

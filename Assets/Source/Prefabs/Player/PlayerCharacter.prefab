@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 2880439712976397791}
   - component: {fileID: 7899312616540961209}
   - component: {fileID: 8640466679332319250}
-  - component: {fileID: 3707589857952606558}
   m_Layer: 9
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -146,18 +145,25 @@ MonoBehaviour:
   EntityStats:
     Attack:
       BaseValue: 5
+      MinValue: 0
     Health:
       BaseValue: 100
+      MinValue: 1
     Speed:
       BaseValue: 6
+      MinValue: 0
     BonusChance:
       BaseValue: 0
+      MinValue: 0
     Omnivamp:
       BaseValue: 0
+      MinValue: 0
     AttackSpeed:
       BaseValue: 0
+      MinValue: 0
     AbilityHaste:
       BaseValue: 0
+      MinValue: 0
   Enemy: 0
   _playOnDamage: 1
   _damagedAnimation: oof
@@ -394,18 +400,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _killScore: 1
   _levelUpScore: 10
---- !u!114 &3707589857952606558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8427230228473258515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae1c39010cf749144822131129ff947f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8427230228697905509
 GameObject:
   m_ObjectHideFlags: 0

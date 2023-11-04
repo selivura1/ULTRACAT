@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 041ea56d64ca39b4394b6a99ddfaaca7, type: 3}
-  m_Name: PistolWS
+  m_Name: RifleWS
   m_EditorClassIdentifier: 
-  Name: Pistol
-  Desc: Charge attack - Unleashes burst of attacks
-  Icon: {fileID: 1494861538, guid: b8463d2d400f4ee41a6f851cf9e795f5, type: 3}
+  Name: Rifle
+  Desc: 
+  Icon: {fileID: -1524019227, guid: b8463d2d400f4ee41a6f851cf9e795f5, type: 3}
   SoundChannel: 0
   baseDamage: 0
-  percentFromATK: 125
-  attackTime: 0.15
+  percentFromATK: 50
+  attackTime: 0.05
   attackSpawnRange: {x: 0, y: 0}
-  BaseReloadSpeed: 275
-  ChargeAttackEnabled: 1
-  MaxChargeTime: 0.6
-  chargeMultiplier: 0.7
-  chargeAttackTime: 0.3
+  BaseReloadSpeed: 900
+  ChargeAttackEnabled: 0
+  MaxChargeTime: 0.3
+  chargeMultiplier: 0.45
+  chargeAttackTime: 0.4
   Sounds:
-  - {fileID: 8300000, guid: 3c3ae2ec7a6b8b84ab77540c69c4ccae, type: 3}
+  - {fileID: 8300000, guid: ff46d99e92e840542aeeb6f5444426c2, type: 3}
   hitSounds: []
   cameraShakeFrec: 0.5
   cameraShakeAmp: 0.5

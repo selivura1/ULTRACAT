@@ -44,18 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fb5db08cf15db4dbcede8187d15755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Pistol
-  Desc: Charge attack - Unleashes burst of attacks
-  Icon: {fileID: 1494861538, guid: b8463d2d400f4ee41a6f851cf9e795f5, type: 3}
-  SoundChannel: 0
   WeaponSettings: {fileID: 11400000, guid: 1dcfbff6d3fecf34194dcb0e7551ed32, type: 2}
   graphics: {fileID: 0}
   animator: {fileID: 0}
   StunOnAttack: 1
   Projectile: {fileID: 1060391164198894900, guid: bd4305bd6cae0cb4ab473f255b59041b, type: 3}
-  spread: 3
+  spread: 0
   projectileAmount: 1
   _chargedShotsAmount: 3
-  _chargedProjectileAmount: 5
+  _chargedProjectileAmount: 3
   _chargedAttackTimeBetweenShots: 0.1
-  _chargedSpread: 10
+  _chargedSpread: 30

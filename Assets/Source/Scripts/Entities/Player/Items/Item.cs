@@ -27,6 +27,10 @@ namespace Ultracat
 
             entity.EntityStats.Attack.AddModifier(Attack);
             entity.EntityStats.Health.AddModifier(Health);
+            if(Health.Type == StatModType.Flat)
+                entity.Heal(Health.Value);
+            else 
+                entity.Heal(entity.EntityStats.Health.Value * Health.Value);
             entity.EntityStats.Speed.AddModifier(Speed);
             entity.EntityStats.BonusChance.AddModifier(CollectibleChance);
             entity.EntityStats.Omnivamp.AddModifier(Omnivamp);

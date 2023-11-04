@@ -41,7 +41,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 748f50c375ec75343957b27956b5016d, type: 3}
   hitSounds:
   - {fileID: 8300000, guid: ebdf3cb4bf692494f9d1f634bde5e049, type: 3}
-  - {fileID: 8300000, guid: ebdf3cb4bf692494f9d1f634bde5e049, type: 3}
   cameraShakeFrec: 0.5
   cameraShakeAmp: 0.5
   cameraShakeTime: 0.5

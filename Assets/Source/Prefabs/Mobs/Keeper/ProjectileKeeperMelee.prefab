@@ -5014,13 +5014,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 15
-  baseLifetime: 0.5
+  baseLifetime: 0.4
   CurrentSpeed: 500
   speed: 0
   _destroyOnFirstTarget: 0
   _melee: 0
   _enemy: 1
-  delay: 0.2
+  delay: 0.1
   wallMask:
     serializedVersion: 2
     m_Bits: 64

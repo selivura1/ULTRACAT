@@ -67,18 +67,25 @@ MonoBehaviour:
   EntityStats:
     Attack:
       BaseValue: 10
+      MinValue: 0
     Health:
-      BaseValue: 250
+      BaseValue: 300
+      MinValue: 0
     Speed:
       BaseValue: 5
+      MinValue: 0
     BonusChance:
       BaseValue: 0
+      MinValue: 0
     Omnivamp:
       BaseValue: 0
+      MinValue: 0
     AttackSpeed:
       BaseValue: 0
+      MinValue: 0
     AbilityHaste:
       BaseValue: 0
+      MinValue: 0
   Enemy: 1
   _playOnDamage: 0
   _damagedAnimation: DemonicaHit

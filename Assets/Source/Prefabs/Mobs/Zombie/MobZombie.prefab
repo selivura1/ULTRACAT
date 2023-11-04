@@ -67,7 +67,7 @@ MonoBehaviour:
     Attack:
       BaseValue: 20
     Health:
-      BaseValue: 60
+      BaseValue: 80
     Speed:
       BaseValue: 5
     BonusChance:

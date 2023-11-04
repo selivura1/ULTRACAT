@@ -23,6 +23,7 @@ public class CharacterStat
     private bool isDirty = true;
     private float _value;
     private float lastBaseValue = float.MinValue;
+    public float MinValue = 0;
     public float Value
     {
         get
@@ -105,7 +106,8 @@ public class CharacterStat
                 finalValue *= 1 + mod.Value;
             }
         }
-
+        if(finalValue < MinValue)
+            finalValue = MinValue;
         return finalValue;
     }
 }

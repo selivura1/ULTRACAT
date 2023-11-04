@@ -20,7 +20,7 @@ MonoBehaviour:
   percentFromATK: 150
   attackTime: 0.1
   attackSpawnRange: {x: 0, y: 0}
-  BaseReloadSpeed: 150
+  BaseReloadSpeed: 300
   ChargeAttackEnabled: 1
   MaxChargeTime: 0.4
   chargeMultiplier: 0.75

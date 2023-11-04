@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ExecuteBladeWS
   m_EditorClassIdentifier: 
   Name: Blade of the ruined cat
-  Desc: 'Executes enemies below 5% health
+  Desc: 'Executes enemies below 15% health
 
 
     Charged attack - throw projectile
@@ -21,12 +21,12 @@ MonoBehaviour:
   Icon: {fileID: -1910867285, guid: b8463d2d400f4ee41a6f851cf9e795f5, type: 3}
   SoundChannel: 0
   baseDamage: 0
-  percentFromATK: 225
+  percentFromATK: 300
   attackTime: 0.1
   attackSpawnRange: {x: 0, y: 0}
-  BaseReloadSpeed: 175
+  BaseReloadSpeed: 150
   ChargeAttackEnabled: 1
-  MaxChargeTime: 0.3
+  MaxChargeTime: 0.001
   chargeMultiplier: 2
   chargeAttackTime: 0.1
   Sounds:

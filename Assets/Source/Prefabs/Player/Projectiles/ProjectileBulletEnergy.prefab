@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3916871431484076679}
   - component: {fileID: -5769040845366862264}
   m_Layer: 8
-  m_Name: ProjectilePistolShot
+  m_Name: ProjectileBulletEnergy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
